@@ -5,12 +5,16 @@ import {
   Route
 } from "react-router-dom";
 
+import MovieDBView from './component/MovieDBView';
+
 function App() {
   return (
     <Router>
-    <div className="App">  
-          <p>Moin</p>
-    </div>
+      <Switch>
+        <Route path="/" exact>
+          <MovieDBView />
+        </Route>
+      </Switch>
     </Router>
   );
 }
