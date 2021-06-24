@@ -15,6 +15,33 @@ font-family: 'Roboto', sans-serif;*/
 }
 
 /* -----Header------- */
+.header{
+  padding: 3em;
+  display:flex;
+  justify-content: space-around;
+  background-color: $dark-background;
+
+  
+  .search-box{
+    width: 40%;
+    display: flex;
+    input{
+       width: 80%;
+       height: 3em;
+    }
+    .search-icon-box{
+      width: 20%;
+      img{
+        width: 2em;
+        color: $accent-color;
+      }
+    }
+  }
+
+  a{
+    text-decoration: none;
+  }
+}
 
 
 /* -----Main---------- */
