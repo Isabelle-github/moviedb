@@ -8,8 +8,13 @@ class Footer extends Component {
 
     render() {
         return (
-            <footer>
-                FOOTER
+            <footer className="foot-style">
+                <h1><span className="dot">. </span>MOV</h1>
+                <p>Imprint</p>
+                <div className="socialmedia-icon">
+                    <a href="instagram"><img src="./img/instagram.png" alt="" /></a>
+                    <a href="facebook"><img src="./img/facebook.png" alt="" /></a>
+                </div>
             </footer>
         );
     }
