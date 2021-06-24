@@ -18,7 +18,9 @@ class MovieListItem extends Component {
         return (
             <div className="movieItem">
                 <img src={`http://image.tmdb.org/t/p/w200/` + this.props.img} alt="" />
-                {this.props.name}
+                <p className="vote">{this.props.vote}</p>
+                <p className="release-genre">{this.props.release}- <span>{this.props.genre}</span></p>
+                <h3 className="name">{this.props.name}</h3>
             </div>
         );
     }
