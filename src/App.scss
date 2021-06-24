@@ -22,3 +22,33 @@ font-family: 'Roboto', sans-serif;*/
 
 
 /* -----Footer-------- */
+.foot-style {
+  background: $dark-background;
+  color: $font-color;
+  display: flex;
+  align-items: center;
+  padding: 2%;
+  h1 {
+    font-family: 'Anton', sans-serif;
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: left;
+    margin-left: 2%;
+    .dot {
+      color: $accent-color;
+      margin-right: 2%;
+    }
+  }
+  p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    margin-left: 10%;
+  }
+  .socialmedia-icon {
+    margin-left: 25%;
+    a img {
+      width: 35%;
+      padding-right: 15px;
+    }
+  }
+}
