@@ -7,28 +7,22 @@ import Header from './Header';
 class MovieDetail extends Component {
 
     state = {
-        data: [],
-        selected_Movie: {},
-        movie_id: this.props.match.params.id
+        data: {}
     }
 
     async componentDidMount() {
-
-        const response = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`)
+        const response = await fetch(`https://api.themoviedb.org/3/movie/${this.props.match.params.id}?api_key=${apiKey}`)
         const json = await response.json()
         console.log(json)
-        console.log(json.results)
-        this.setState({ data: json.results });
-        // this.setState({selected_Movie: this.state.data})
+        this.setState({ data: json });
     }
 
     render() {
         return (
             <div>
                 <Header></Header>
-                MOVIEDETAIL
-
-                {this.props.match.params.id}
+                TEst
+                {this.state.data.budget}
                 <Footer></Footer>
             </div>
         );
