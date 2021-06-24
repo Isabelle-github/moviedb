@@ -7,12 +7,12 @@ class Header extends Component {
     render() {
         return (
             <header>
-                <h1>MOV</h1>
+                <h1> <span>.</span>MOV</h1>
                 <div className='search-box'>
                     <input type="text" placeholder="Search Something"></input>
                     <div className='search-icon-box'><img src={searchIcon}></img></div>
                 </div>
-                <a href="https://www.w3schools.com">Add movies</a>
+                <a href="#addmovie">Add movies</a>
             </header>
         );
     }

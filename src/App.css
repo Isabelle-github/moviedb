@@ -10,6 +10,7 @@ font-family: 'Roboto', sans-serif;*/
 
 /* -----Header------- */
 .header {
+  color: #FFFFFF;
   padding: 3em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -17,6 +18,11 @@ font-family: 'Roboto', sans-serif;*/
   -ms-flex-pack: distribute;
       justify-content: space-around;
   background-color: #1A2634;
+}
+
+.header h1 {
+  text-transform: uppercase;
+  font-size: 4em;
 }
 
 .header .search-box {
@@ -40,7 +46,7 @@ font-family: 'Roboto', sans-serif;*/
   color: #21E18C;
 }
 
-.header a {
+.header a:active, .header a:visited, .header a {
   text-decoration: none;
 }
 
