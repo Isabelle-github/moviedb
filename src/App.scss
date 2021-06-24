@@ -54,9 +54,21 @@ header{
    
 }
 
-
 /* -----Main---------- */
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  background-color: $main-background;
+  color: $font-color;
+}
 
+.movieItem {
+  display: flex;
+  flex-direction: column;
+
+  margin: 1em;
+
+}
 
 
 /* -----Footer-------- */
@@ -91,15 +103,3 @@ header{
   }
 }
 
-main {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-}
-
-.movieItem {
-  display: flex;
-  flex-direction: column;
-
-  margin: 1em;
-
-}

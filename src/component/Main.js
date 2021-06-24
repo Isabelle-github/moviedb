@@ -2,6 +2,10 @@ import React, { Component } from "react";
 import apiKey from "../data/apiKey";
 import MovieListItem from "./MovieListItem";
 
+import {
+    Link
+} from "react-router-dom";
+
 class Main extends Component {
 
     state = {
@@ -19,7 +23,9 @@ class Main extends Component {
         return (
             <main>
                 {this.state.popularMovies.map(movie => {
-                    return <MovieListItem img={movie.poster_path} name={movie.title} />
+                    return <Link to={`/${movie.id}`}>
+                        <MovieListItem key={movie.id} img={movie.poster_path} name={movie.title} />
+                    </Link>
                 })}
             </main>
         );
