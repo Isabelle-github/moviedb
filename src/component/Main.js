@@ -24,16 +24,16 @@ class Main extends Component {
             <main>
                 <h1>Popular movies</h1>
                 <div className="body-movies">
-                {this.state.popularMovies.map(movie => {
-                    return <Link to={`/${movie.id}`}>
-                        <MovieListItem key={movie.id} 
-                                       img={movie.poster_path} 
-                                       name={movie.title}
-                                       vote={movie.vote_average}
-                                       release={movie.release_date}
-                                       genre={movie.genre_ids} />
-                    </Link>
-                })}
+                    {this.state.popularMovies.map(movie => {
+                        return <Link key={movie.id} to={`/${movie.id}`}>
+                            <MovieListItem key={movie.id}
+                                img={movie.poster_path}
+                                name={movie.title}
+                                vote={movie.vote_average}
+                                release={movie.release_date}
+                                genre={movie.genre_ids} />
+                        </Link>
+                    })}
                 </div>
             </main>
         );
