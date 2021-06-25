@@ -8,14 +8,16 @@ import Trailer from './Trailer';
 class MovieDetail extends Component {
 
     state = {
-        data: {}
+        data: [],
+        genres: []
     }
 
     async componentDidMount() {
         const response = await fetch(`https://api.themoviedb.org/3/movie/${this.props.match.params.id}?api_key=${apiKey}`)
         const json = await response.json()
-        console.log(json)
         this.setState({ data: json });
+        this.setState({ genres: json.genres });
+        console.log(this.state.genres)
     }
 
     render() {
@@ -33,12 +35,13 @@ class MovieDetail extends Component {
                             <h2>Release Date</h2>
                             <p>{this.state.data.release_date}</p>
                             <h2>Genres</h2>
-                            <p>Action, Thriller, Romance, Horror</p>
-                            {/* <p>
-                        {this.state.data.genres.map(mov_genre => {
-                            return <span key={mov_genre.id}>{mov_genre.name}, </span>
-                        })}
-                    </p> */}
+                            <p>{this.state.genres.map((genre, i) => {
+                                if (i === this.state.genres.length - 1) {
+                                    return <span key={i}>{genre.name}</span>
+                                } else {
+                                    return <span key={i}>{genre.name}, </span>
+                                }
+                            })}</p>
                             <h2>Overview</h2>
                             <p>{this.state.data.overview}</p>
                             <h2>Average Voting</h2>

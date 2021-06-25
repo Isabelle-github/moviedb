@@ -99,6 +99,7 @@ main {
   text-decoration: none;
   border-style: none;
   position: relative;
+  max-width: 300px;
   .vote {
     background: $accent-color;
     border-radius: 40px;
