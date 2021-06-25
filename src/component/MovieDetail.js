@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
 import apiKey from '../data/apiKey';
-import Footer from './Footer';
-import Header from './Header';
-
 
 class MovieDetail extends Component {
 
@@ -20,10 +17,8 @@ class MovieDetail extends Component {
     render() {
         return (
             <div>
-                <Header></Header>
                 TEst
                 {this.state.data.budget}
-                <Footer></Footer>
             </div>
         );
     }

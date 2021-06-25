@@ -24,7 +24,7 @@ class Main extends Component {
             <main>
                 <h1>Popular movies</h1>
                 <div className="body-movies">
-                    {this.state.popularMovies.map(movie => {
+                    {this.state.popularMovies.filter(movie => movie.title.includes(this.props.searchInput)).map(movie => {
                         return <Link key={movie.id} to={`/${movie.id}`}>
                             <MovieListItem key={movie.id}
                                 img={movie.poster_path}

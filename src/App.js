@@ -10,15 +10,16 @@ import MovieDetail from './component/MovieDetail';
 
 function App() {
   return (
-    <Router>
-      <Switch>
-        <Route path="/" exact>
-          <MovieDBView />
-        </Route>
-        <Route path="/:id" component={MovieDetail}>
-        </Route>
-      </Switch>
-    </Router>
+    // <Router>
+    //   <Switch>
+    //     <Route path="/" exact>
+    //       <MovieDBView />
+    //     </Route>
+    //     <Route path="/:id" component={MovieDetail}>
+    //     </Route>
+    //   </Switch>
+    // </Router>
+    <MovieDBView />
   );
 }
 
