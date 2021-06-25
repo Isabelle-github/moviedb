@@ -47,7 +47,7 @@ class MovieDetail extends Component {
                             <h2>Average Voting</h2>
                             <p>{this.state.data.vote_average}</p>
                         </div>
-                        <div >
+                        <div>
                             <h2>Watch Trailer</h2>
                             <Trailer movie_id={this.props.match.params.id} imgSrc={this.state.data.poster_path}></Trailer>
                         </div>
