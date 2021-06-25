@@ -21,7 +21,6 @@ class MovieDetail extends Component {
     render() {
         return (
             <div className='movie_Details'>
-                <Header></Header>
                 <h1 className='detail_title'>{this.state.data.title}</h1>
                 <div className='contain_details'>
 
@@ -52,7 +51,6 @@ class MovieDetail extends Component {
                     </div>
 
                 </div>
-                <Footer></Footer>
             </div>
         );
     }
