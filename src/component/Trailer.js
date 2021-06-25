@@ -31,13 +31,10 @@ class Trailer extends Component {
 
     render() {
         return (
-            // <video width="500" height="350" autoPlay controls src={`https://www.youtube.com/watch?v=${this.state.chosen_key}`} type="video/mp4">
-            //     Your browser does not support the video 😟
-            // </video>
-
-            <a href={`https://www.youtube.com/watch?v=${this.state.chosen_key}`}>
-                <img src={`https://image.tmdb.org/t/p/w200/` + this.props.imgSrc} alt='videotrailer' width="400" height="300"></img>
-            </a>
+            <iframe width="560" height="315" src={`https://www.youtube.com/embed/${this.state.chosen_key}`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            // <a href={`https://www.youtube.com/watch?v=${this.state.chosen_key}`}>
+            //     <img src={`https://image.tmdb.org/t/p/w200/` + this.props.imgSrc} alt='videotrailer' width="400" height="300"></img>
+            // </a>
         );
     }
 }

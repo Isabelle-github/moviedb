@@ -26,7 +26,7 @@ class MovieDetail extends Component {
 
                     <div className='box_left'>
 
-                        <img src={`https://image.tmdb.org/t/p/w400/` + this.state.data.poster_path} alt='poster'></img>
+                        <img src={`https://image.tmdb.org/t/p/original/` + this.state.data.poster_path} alt='poster'></img>
                     </div>
                     <div className='box_right'>
                         <div className='detail_grid'>
