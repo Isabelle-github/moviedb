@@ -17,7 +17,7 @@ class MovieDetail extends Component {
         const json = await response.json()
         this.setState({ data: json });
         this.setState({ genres: json.genres });
-        console.log(this.state.genres)
+        // console.log(this.state.genres)
     }
 
     render() {

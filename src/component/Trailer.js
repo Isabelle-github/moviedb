@@ -10,15 +10,15 @@ class Trailer extends Component {
     async componentDidMount() {
         const response = await fetch(`https://api.themoviedb.org/3/movie/${this.props.movie_id}/videos?api_key=${apiKey}`)
         const json = await response.json()
-        console.log(json)
+        // console.log(json)
         if (json !== undefined) {
             this.setState({ video_trailers: json.results });
-            console.log(json.results)
+            // console.log(json.results)
 
             const arr = this.state.video_trailers.map((obj) => {
                 return obj.key;
             });
-            console.log(arr)
+            // console.log(arr)
 
             this.setState({ video_keys: arr });
             console.log(this.state.video_keys)

@@ -10,35 +10,50 @@ class Main extends Component {
 
     state = {
         popularMovies: [],
-        genres: []
+        genreList: []
     }
 
     async componentDidMount() {
         const response = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`)
         const json = await response.json()
-        console.log(json)
+        // console.log(json)
         this.setState({ popularMovies: json.results });
-        
+
         const response2 = await fetch(`https://api.themoviedb.org/3/genre/list?api_key=${apiKey}`)
         const json2 = await response2.json()
-        console.log(json2)
-        this.setState({ genres: json2.genres });
-        console.log(this.state.genres)
+        this.setState({ genreList: json2.genres });
+        // console.log(this.state.genreList)
     }
-  
+
     render() {
         return (
             <main>
                 <h1>Popular movies</h1>
                 <div className="body-movies">
                     {this.state.popularMovies.filter(movie => movie.title.includes(this.props.searchInput)).map(movie => {
+                        let newGenreListForMovie = []
+                        this.state.genreList.forEach(genreId => {
+                            // console.log("genreID from List")
+                            // console.log(genreId)
+                            movie.genre_ids.forEach(id => {
+                                // console.log("movie id for each")
+                                // console.log(`before possible hit id:${id} genreId:${genreId}`)
+                                if (genreId.id === id) {
+                                    console.log("hit")
+                                    newGenreListForMovie.push(genreId.name)
+                                }
+                            })
+                        })
+                        // console.log(newGenreListForMovie)
+
+
                         return <Link key={movie.id} to={`/${movie.id}`}>
                             <MovieListItem key={movie.id}
                                 img={movie.poster_path}
                                 name={movie.title}
                                 vote={movie.vote_average}
                                 release={movie.release_date}
-                                genre={movie.genre_ids} />
+                                genre={newGenreListForMovie} />
                         </Link>
                     })}
                 </div>
