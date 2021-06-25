@@ -9,7 +9,8 @@ import {
 class Main extends Component {
 
     state = {
-        popularMovies: []
+        popularMovies: [],
+        genres: []
     }
 
     async componentDidMount() {
@@ -17,8 +18,14 @@ class Main extends Component {
         const json = await response.json()
         console.log(json)
         this.setState({ popularMovies: json.results });
+        
+        const response2 = await fetch(`https://api.themoviedb.org/3/genre/list?api_key=${apiKey}`)
+        const json2 = await response2.json()
+        console.log(json2)
+        this.setState({ genres: json2.genres });
+        console.log(this.state.genres)
     }
-
+  
     render() {
         return (
             <main>

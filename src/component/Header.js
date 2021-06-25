@@ -18,7 +18,7 @@ class Header extends Component {
                     <div className='search-icon-box'><img src={searchIcon}></img></div>
                     <input type="text" placeholder="Search Something" onChange={(e) => this.changeSearchInput(e.target.value)}></input>
                 </div>
-                <a href="#addmovie">Add movies</a>
+                <a href="#addmovie">Language</a>
             </header>
         );
     }
