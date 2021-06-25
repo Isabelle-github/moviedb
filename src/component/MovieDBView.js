@@ -25,7 +25,6 @@ class MovieDBView extends Component {
         return (
             <Router>
                 <Header setSearch={(input) => this.setSearchInput(input)}></Header>
-                {/* <Main ></Main> */}
                 <Switch>
                     <Route path="/" exact>
                         <Main searchInput={this.state.searchInput}></Main>

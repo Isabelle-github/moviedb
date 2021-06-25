@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import searchIcon from '../img/searchIcon.png';
+import searchIcon from '../img/searchIcon.svg';
 class Header extends Component {
 
     state = {
@@ -13,7 +13,7 @@ class Header extends Component {
     render() {
         return (
             <header>
-                <h1> <span>.</span>MOV</h1>
+                <h1><span>.</span>MOV</h1>
                 <div className='search-box'>
                     <div className='search-icon-box'><img src={searchIcon}></img></div>
                     <input type="text" placeholder="Search Something" onChange={(e) => this.changeSearchInput(e.target.value)}></input>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import apiKey from '../data/apiKey';
+// import apiKey from '../data/apiKey';
 
 class MovieListItem extends Component {
 
