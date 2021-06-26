@@ -68,6 +68,14 @@ header{
     color: $font-color;
     font-size: 1.5em;
   }
+
+  .langSelect {
+    min-width: 100px;
+    
+    border-color: $accent-color;
+    &::selection {
+    }
+  }
    
 }
 

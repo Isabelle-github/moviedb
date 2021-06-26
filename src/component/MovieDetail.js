@@ -7,13 +7,20 @@ import Trailer from './Trailer';
 
 class MovieDetail extends Component {
 
-    state = {
-        data: [],
-        genres: []
+    constructor(props) {
+        super(props)
+        this.state = {
+            data: [],
+            genres: [],
+            lang: localStorage.getItem("preferredLanguage") ? localStorage.getItem("preferredLanguage") : "de"
+        }
+
+        console.log(localStorage.getItem("preferredLanguage"))
     }
 
+
     async componentDidMount() {
-        const response = await fetch(`https://api.themoviedb.org/3/movie/${this.props.match.params.id}?api_key=${apiKey}`)
+        const response = await fetch(`https://api.themoviedb.org/3/movie/${this.props.match.params.id}?api_key=${apiKey}&language=${this.state.lang}`)
         const json = await response.json()
         this.setState({ data: json });
         this.setState({ genres: json.genres });

@@ -6,15 +6,18 @@ import {
     Link
 } from "react-router-dom";
 
+import getString from '../data/strings'
+
 class Main extends Component {
 
     state = {
         popularMovies: [],
-        genreList: []
+        genreList: [],
+        lang: localStorage.getItem('preferredLanguage')
     }
 
     async componentDidMount() {
-        const response = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`)
+        const response = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=${this.state.lang}`)
         const json = await response.json()
         // console.log(json)
         this.setState({ popularMovies: json.results });
@@ -28,7 +31,7 @@ class Main extends Component {
     render() {
         return (
             <main>
-                <h1>Popular movies</h1>
+                <h1>{getString('popularTitle')}</h1>
                 <div className="body-movies">
                     {this.state.popularMovies.filter(movie => movie.title.includes(this.props.searchInput)).map(movie => {
                         let newGenreListForMovie = []
@@ -39,7 +42,7 @@ class Main extends Component {
                                 // console.log("movie id for each")
                                 // console.log(`before possible hit id:${id} genreId:${genreId}`)
                                 if (genreId.id === id) {
-                                    console.log("hit")
+                                    // console.log("hit")
                                     newGenreListForMovie.push(genreId.name)
                                 }
                             })

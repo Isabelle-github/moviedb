@@ -9,6 +9,9 @@ import MovieDBView from './component/MovieDBView';
 import MovieDetail from './component/MovieDetail';
 
 function App() {
+  if (!localStorage.getItem('preferredLanguage')) {
+    localStorage.setItem('preferredLanguage', 'de')
+  }
   return (
     <MovieDBView />
   );
