@@ -31,6 +31,17 @@ class Trailer extends Component {
 
     render() {
         return (
+
+            // {this.state.popularMovies.filter(movie => movie.title.includes(this.props.searchInput)).map(movie => {
+            //     return <Link key={movie.id} to={`/${movie.id}`}>
+            //         <MovieListItem key={movie.id}
+            //             img={movie.poster_path}
+            //             name={movie.title}
+            //             vote={movie.vote_average}
+            //             release={movie.release_date}
+            //             genre={movie.genre_ids} />
+            //     </Link>
+            // })}
             <iframe width="560" height="315" src={`https://www.youtube.com/embed/${this.state.chosen_key}`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             // <a href={`https://www.youtube.com/watch?v=${this.state.chosen_key}`}>
             //     <img src={`https://image.tmdb.org/t/p/w200/` + this.props.imgSrc} alt='videotrailer' width="400" height="300"></img>
