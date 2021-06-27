@@ -101,7 +101,8 @@ main {
   position: relative;
   max-width: 300px;
   img:hover {
-    width: 207px;
+    padding: .5%;
+    transition: .7s;
     box-shadow: rgba(99, 97, 97, 0.56) 0px 22px 70px 4px;
   }
   .vote {
@@ -206,4 +207,19 @@ main {
       margin-bottom: 4em;
     }
   }
+}
+
+/* ----- media queries----- */
+@media screen and (max-width: 1200px) {
+  
+}
+
+/* Tablet */
+@media screen and (max-width: 768px) {
+
+}
+
+/* Mobile */
+@media screen and (max-width: 576px) {
+
 }
