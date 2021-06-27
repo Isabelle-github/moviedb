@@ -68,6 +68,14 @@ header{
     color: $font-color;
     font-size: 1.5em;
   }
+
+  .langSelect {
+    min-width: 100px;
+    
+    border-color: $accent-color;
+    &::selection {
+    }
+  }
    
 }
 
@@ -189,7 +197,10 @@ main {
     .box_left{
       img{
         width: 90%;
-        height: 100%;
+        // height: 100%;
+
+        object-fit: cover;
+        object-position: center;
       }
   
     }
