@@ -7,6 +7,12 @@ function getString(id) {
             return getDeForId(id)
         case 'en':
             return getEnForId(id)
+        case 'ru':
+            return getRuForId(id)
+        case 'fr':
+            return getFrForId(id)
+        case 'nl':
+            return getNlForId(id)
         default:
             // console.log(localStorage.getItem('preferredLanguage'))
             break
@@ -38,6 +44,30 @@ function getEnForId(id) {
         }
     }
 }
+function getRuForId(id) {
+    for (const [key, value] of Object.entries(ruStrings)) {
+        console.log(`${key}: ${value}`)
+        if (id === key) {
+            return value
+        }
+    }
+}
+function getFrForId(id) {
+    for (const [key, value] of Object.entries(frStrings)) {
+        console.log(`${key}: ${value}`)
+        if (id === key) {
+            return value
+        }
+    }
+}
+function getNlForId(id) {
+    for (const [key, value] of Object.entries(nlStrings)) {
+        console.log(`${key}: ${value}`)
+        if (id === key) {
+            return value
+        }
+    }
+}
 
 const deStrings =
 {
@@ -52,6 +82,27 @@ const enStrings =
     popularTitle: 'Popular movies',
     searchPlaceholder: 'Search something',
     movieDetailRelease: 'Release Date'
+}
+
+const ruStrings =
+{
+    popularTitle: '',
+    searchPlaceholder: '',
+    movieDetailRelease: ''
+}
+
+const frStrings =
+{
+    popularTitle: '',
+    searchPlaceholder: '',
+    movieDetailRelease: ''
+}
+
+const nlStrings =
+{
+    popularTitle: '',
+    searchPlaceholder: '',
+    movieDetailRelease: ''
 }
 
 
