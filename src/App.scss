@@ -75,9 +75,17 @@ header{
     border-color: $accent-color;
     &::selection {
     }
+    
+  }
+  .css-yk16xz-control {
+    outline-style: none;
+    background: $main-background;
+    border-color: $accent-color;
+    
   }
    
 }
+
 
 /* -----Main---------- */
 main {
