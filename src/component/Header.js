@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import searchIcon from '../img/searchIcon.svg';
-import Select from 'react-select'
-import getString from '../data/strings'
+import Select from 'react-select';
+import getString from '../data/strings';
+import { Link } from "react-router-dom";
 
 
 class Header extends Component {
@@ -36,7 +37,9 @@ class Header extends Component {
     render() {
         return (
             <header>
-                <h1><span>.</span>MOV</h1>
+                <Link to='/'>
+                    <h1><span>.</span>MOV</h1>
+                </Link>
                 <div className='search-box'>
                     <div className='search-icon-box'><img src={searchIcon} alt="a search icon"></img></div>
                     <input type="text" placeholder={getString('searchPlaceholder')} onChange={(e) => this.changeSearchInput(e.target.value)}></input>

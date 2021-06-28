@@ -17,6 +17,11 @@ font-family: 'Roboto', sans-serif;*/
 
 /* -----Header------- */
 header{
+  opacity: 1;
+  overflow: hidden;
+  /* position: fixed;
+  top:0; */
+  width: 100%;
   color: $font-color;
   padding: 3em;
   display:flex;
@@ -89,6 +94,7 @@ header{
 
 /* -----Main---------- */
 main {
+  /* margin-top: 10%; */
   background-color: $main-background;
   color: $font-color;
   padding: 4%;
@@ -116,11 +122,11 @@ main {
   border-style: none;
   position: relative;
   max-width: 300px;
-  img:hover {
-    padding: .5%;
-    transition: .7s;
+  img:hover { 
+    border: 2px $accent-color solid;
     box-shadow: rgba(99, 97, 97, 0.56) 0px 22px 70px 4px;
   }
+  
   .vote {
     background: $accent-color;
     border-radius: 40px;
@@ -203,24 +209,19 @@ main {
       font-size: 1.5rem;
     }
     .box_left{
+      width: 60%;
       img{
         width: 90%;
         // height: 100%;
-
         object-fit: cover;
         object-position: center;
       }
   
     }
-  
-    .box_right{
-      width: 50%;
-  
-    }
 
     .detail_grid{
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr 2fr;
       width: 100%;
       row-gap: 1.5%;
       margin-bottom: 4em;
@@ -241,4 +242,15 @@ main {
 /* Mobile */
 @media screen and (max-width: 576px) {
 
+  h2{
+    font-family: 'Anton', sans-serif;
+    font-size: 1.5rem;
+    padding-left: 5%;
+  }
+  .all_videos{
+    gap: 2%;
+    padding: 5%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 2fr));
+  }
 }
