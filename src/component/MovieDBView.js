@@ -3,6 +3,9 @@ import React, { Component } from "react";
 import Header from './Header';
 import Main from './Main';
 import Footer from './Footer'
+import Nav from "./Nav";
+import Error404 from "./Error404";
+import PopularSeries from "./PopularSeries";
 
 import {
     BrowserRouter as Router,
@@ -30,11 +33,18 @@ class MovieDBView extends Component {
         return (
             <Router>
                 <Header setSearch={(input) => this.setSearchInput(input)} setLang={(lang) => this.setLanguage(lang)}></Header>
+                <Nav></Nav>
                 <Switch>
                     <Route path="/" exact>
                         <Main searchInput={this.state.searchInput}></Main>
                     </Route>
-                    <Route path="/:id" component={MovieDetail}>
+                    <Route path="/series" exact>
+                        <PopularSeries searchInput={this.state.searchInput}></PopularSeries>
+                    </Route>
+                    <Route path="/detail/:id" component={MovieDetail} exact>
+                    </Route>
+                    <Route path="*">
+                        <Error404 />
                     </Route>
                 </Switch>
                 <Footer></Footer>

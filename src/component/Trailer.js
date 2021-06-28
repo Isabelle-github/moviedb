@@ -31,19 +31,19 @@ class Trailer extends Component {
 
 
     render() {
-        return (this.state.video_trailers.length !== 0 ?
-            <article className='all_videos'>
-                {
-                    this.state.video_trailers.map(trailerInfo => {
-                        return (<div key={trailerInfo.id}>
-                            <iframe width="400" height="300" src={`https://www.youtube.com/embed/${trailerInfo.key}`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-                        </div>)
-                    })
-                }
-            </article> : <article className='all_videos'>
-                <img src={NoVideo} alt='NoVideoFound'></img>
-            </article>
-
+        return (
+            this.state.video_trailers.length !== 0 ?
+                <article className='all_videos'>
+                    {
+                        this.state.video_trailers.map(trailerInfo => {
+                            return (<div key={trailerInfo.id}>
+                                <iframe width="400" height="300" src={`https://www.youtube.com/embed/${trailerInfo.key}`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                            </div>)
+                        })
+                    }
+                </article> : <article className='all_videos'>
+                    <img src={NoVideo} alt='NoVideoFound'></img>
+                </article>
         );
     }
 }

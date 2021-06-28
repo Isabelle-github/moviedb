@@ -9,7 +9,10 @@ class Header extends Component {
 
     options = [
         { value: 'en', label: 'en' },
-        { value: 'de', label: 'de' }
+        { value: 'de', label: 'de' },
+        { value: 'ru', label: 'ru' },
+        { value: 'fr', label: 'fr' },
+        { value: 'nl', label: 'nl' },
     ]
     customLangStyle = {
         option: (provided, state) => ({

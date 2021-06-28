@@ -22,11 +22,15 @@ class MovieDetail extends Component {
 
 
     async componentDidMount() {
-        const response = await fetch(`https://api.themoviedb.org/3/movie/${this.props.match.params.id}?api_key=${apiKey}&language=${this.state.lang}`)
-        const json = await response.json()
-        this.setState({ data: json });
-        this.setState({ genres: json.genres });
-        // console.log(this.state.genres)
+        try {
+            const response = await fetch(`https://api.themoviedb.org/3/movie/${this.props.match.params.id}?api_key=${apiKey}&language=${this.state.lang}`)
+            const json = await response.json()
+            this.setState({ data: json });
+            this.setState({ genres: json.genres });
+        } catch (error) {
+            console.log(error)
+            return 'no'
+        }
     }
 
     render() {
