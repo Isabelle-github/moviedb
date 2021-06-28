@@ -22,10 +22,16 @@ class MovieListItem extends Component {
             <div className="movieItem">
                 <img src={`http://image.tmdb.org/t/p/w200/` + this.props.img} alt="" />
                 <p className="vote">{this.props.vote}</p>
-                <p className="release-genre">{this.props.release}-
-                    <span>{this.props.genre.map((genre, i) => {
-                        return <span key={i}>{genre} <br /></span>
-                    })}</span></p>
+                <p className="release-genre">
+                    <span>{this.props.release} — </span>
+                    {this.props.genre.map((genre, i) => {
+                        if (i === this.props.genre.length - 1) {
+                            return <span key={i}>{genre}</span>
+                        } else {
+                            return <span key={i}>{genre}, </span>
+                        }
+                    })}
+                </p>
                 <h3 className="name">{this.props.name}</h3>
             </div>
         );

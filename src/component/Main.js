@@ -33,7 +33,7 @@ class Main extends Component {
             <main>
                 <h1>{getString('popularTitle')}</h1>
                 <div className="body-movies">
-                    {this.state.popularMovies.filter(movie => movie.title.includes(this.props.searchInput)).map(movie => {
+                    {this.state.popularMovies.filter(movie => movie.title.toLowerCase().includes(this.props.searchInput.toLowerCase())).map(movie => {
                         let newGenreListForMovie = []
                         this.state.genreList.forEach(genreId => {
                             // console.log("genreID from List")
@@ -49,13 +49,18 @@ class Main extends Component {
                         })
                         // console.log(newGenreListForMovie)
 
+                        let releaseYear = movie.release_date
+                        if (typeof releaseYear === 'string') {
+                            releaseYear = releaseYear.substr(0, 4)
+                            console.log(releaseYear)
+                        }
 
                         return <Link key={movie.id} to={`/${movie.id}`}>
                             <MovieListItem key={movie.id}
                                 img={movie.poster_path}
                                 name={movie.title}
                                 vote={movie.vote_average}
-                                release={movie.release_date}
+                                release={releaseYear}
                                 genre={newGenreListForMovie} />
                         </Link>
                     })}
