@@ -71,38 +71,97 @@ function getNlForId(id) {
 
 const deStrings =
 {
-    popularTitle: 'Beliebte Filme',
+    //Header
     searchPlaceholder: 'Suche etwas',
-    movieDetailRelease: 'Veröffentlichung'
-
+    //Main
+    popularTitle: 'Beliebte Filme',
+    popularSeriesTitle: 'Beliebte Serien',
+    popularLinkMovies: 'Beliebte Filme',
+    popularLinkSeries: 'Beliebte Serien',
+    //Detail
+    movieDetailRelease: 'Veröffentlichung',
+    movieDetailGenre: 'Genre',
+    movieDetailOverview: 'Übersicht',
+    movieDetailVoting: 'Durschnittsbewertung',
+    movieDetailTrailer: 'Alle Trailer',
+    //Footer
+    footerImprint: 'Impressum'
 }
 
 const enStrings =
 {
-    popularTitle: 'Popular movies',
+    //Header
     searchPlaceholder: 'Search something',
-    movieDetailRelease: 'Release Date'
+    //Main
+    popularTitle: 'Popular movies',
+    popularSeriesTitle: 'Popular series',
+    popularLinkMovies: 'Popular movies',
+    popularLinkSeries: 'Popular series',
+    //Detail
+    movieDetailRelease: 'Release Date',
+    movieDetailGenre: 'Genres',
+    movieDetailOverview: 'Overview',
+    movieDetailVoting: 'Average Voting',
+    movieDetailTrailer: 'All Trailers',
+    //Footer
+    footerImprint: 'Imprint'
 }
 
 const ruStrings =
 {
-    popularTitle: '',
-    searchPlaceholder: '',
-    movieDetailRelease: ''
+     //Header
+     searchPlaceholder: 'поиск',
+     //Main
+     popularTitle: 'Популярные фильмы',
+     popularSeriesTitle: 'Популярные серии',
+     popularLinkMovies: 'Популярные фильмы',
+     popularLinkSeries: 'Популярные серии',
+     //Detail
+     movieDetailRelease: 'Дата выхода',
+     movieDetailGenre: 'Жанры',
+     movieDetailOverview: 'Обзор',
+     movieDetailVoting: 'Среднее голосование',
+     movieDetailTrailer: 'Все трейлеры',
+     //Footer
+     footerImprint: 'Оттиск'
 }
 
 const frStrings =
 {
-    popularTitle: '',
-    searchPlaceholder: '',
-    movieDetailRelease: ''
+     //Header
+     searchPlaceholder: 'Recherche',
+     //Main
+     popularTitle: 'Films populaires',
+     popularSeriesTitle: 'Séries populaires',
+     popularLinkMovies: 'Films populaires',
+     popularLinkSeries: 'Séries populaires',
+     //Detail
+     movieDetailRelease: 'date de sortie',
+     movieDetailGenre: 'Genres',
+     movieDetailOverview: 'Vue d`ensemble',
+     movieDetailVoting: 'Average Voting',
+     movieDetailTrailer: 'Vote moyen',
+     //Footer
+     footerImprint: 'Impression'
 }
 
 const nlStrings =
 {
-    popularTitle: '',
-    searchPlaceholder: '',
-    movieDetailRelease: ''
+     //Header
+     searchPlaceholder: 'Zoek iets',
+     //Main
+     popularTitle: 'Populaire films',
+     popularSeriesTitle: 'Populaire series',
+     popularLinkMovies: 'Populaire films',
+     popularLinkSeries: 'Populaire series',
+     //Detail
+     movieDetailRelease: 'releasedatum',
+     movieDetailGenre: 'Genres',
+     movieDetailOverview: 'Overzicht',
+     movieDetailVoting: 'Gemiddelde stemming',
+     movieDetailTrailer: 'Alle Aanhangwagens',
+     //Footer
+     footerImprint: 'Afdruk'
 }
 
 
