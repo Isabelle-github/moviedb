@@ -4,6 +4,8 @@ import Footer from './Footer';
 import Header from './Header';
 import Trailer from './Trailer';
 
+import getString from '../data/strings'
+
 
 class MovieDetail extends Component {
 
@@ -39,7 +41,7 @@ class MovieDetail extends Component {
                     </div>
                     <div className='box_right'>
                         <div className='detail_grid'>
-                            <h2>Release Date</h2>
+                            <h2>{getString('movieDetailRelease')}</h2>
                             <p>{this.state.data.release_date}</p>
                             <h2>Genres</h2>
                             <p>{this.state.genres.map((genre, i) => {

@@ -42,13 +42,16 @@ function getEnForId(id) {
 const deStrings =
 {
     popularTitle: 'Beliebte Filme',
-    searchPlaceholder: 'Suche etwas'
+    searchPlaceholder: 'Suche etwas',
+    MovieDetailRelease: 'Veröffentlichung'
+
 }
 
 const enStrings =
 {
     popularTitle: 'Popular movies',
-    searchPlaceholder: 'Search something'
+    searchPlaceholder: 'Search something',
+    MovieDetailRelease: 'Release Date'
 }
 
 
