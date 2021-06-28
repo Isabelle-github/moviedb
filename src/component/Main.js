@@ -33,7 +33,7 @@ class Main extends Component {
             <main>
                 <h1>{getString('popularTitle')}</h1>
                 <div className="body-movies">
-                    {this.state.popularMovies.filter(movie => movie.title.includes(this.props.searchInput)).map(movie => {
+                    {this.state.popularMovies.filter(movie => movie.title.toLowerCase().includes(this.props.searchInput.toLowerCase())).map(movie => {
                         let newGenreListForMovie = []
                         this.state.genreList.forEach(genreId => {
                             // console.log("genreID from List")
