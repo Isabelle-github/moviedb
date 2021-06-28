@@ -3,20 +3,24 @@ import searchIcon from '../img/searchIcon.svg';
 import Select from 'react-select';
 import getString from '../data/strings';
 import { Link } from "react-router-dom";
+import germanImg from '../img/german.png'
 
 
 class Header extends Component {
 
     options = [
         { value: 'en', label: 'en' },
-        { value: 'de', label: 'de' }
+        { value: 'de', label: ' 😂 ' }
     ]
     customLangStyle = {
         option: (provided, state) => ({
             ...provided,
-            borderBottom: '1px dotted pink',
-            color: state.isSelected ? 'red' : 'blue',
+            borderBottom: '1px dotted black',
+           /*  color: state.isSelected ? 'red' : 'blue', */
+            /* color: '#21E18C', */
             padding: 10,
+            background: '#24323F',
+            outlineStyle: 'none',
         })
     }
 
@@ -35,6 +39,7 @@ class Header extends Component {
 
 
     render() {
+        console.log(this.customLangStyle)
         return (
             <header>
                 <Link to='/'>
