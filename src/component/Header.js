@@ -10,18 +10,27 @@ class Header extends Component {
 
     options = [
         { value: 'en', label: 'en' },
-        { value: 'de', label: ' 😂 ' }
+        { value: 'de', label: 'de' },
+        { value: 'ru', label: 'ru' },
+        { value: 'fr', label: 'fr' },
+        { value: 'nl', label: 'nl' }
     ]
     customLangStyle = {
         option: (provided, state) => ({
             ...provided,
             borderBottom: '1px dotted black',
            /*  color: state.isSelected ? 'red' : 'blue', */
-            /* color: '#21E18C', */
+            /* border: '1px solid #21E18C', */
             padding: 10,
-            background: '#24323F',
+            margin: 0,
+            background: state.isFocused ? '#24323F' : '#24323F',
             outlineStyle: 'none',
-        })
+        }),
+        
+        /* control: (_, { selectProps: { width }}) => ({
+            
+            color: 'red',
+          }), */
     }
 
     state = {
@@ -49,6 +58,7 @@ class Header extends Component {
                     <div className='search-icon-box'><img src={searchIcon} alt="a search icon"></img></div>
                     <input type="text" placeholder={getString('searchPlaceholder')} onChange={(e) => this.changeSearchInput(e.target.value)}></input>
                 </div>
+               {/*  <img src={germanImg} alt="" /> */}
                 <Select className="langSelect" options={this.options} styles={this.customLangStyle} placeholder={this.state.lang} onChange={(e) => this.handleLangChange(e)} />
             </header>
         );
