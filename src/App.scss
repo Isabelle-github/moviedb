@@ -216,7 +216,6 @@ main {
         object-fit: cover;
         object-position: center;
       }
-  
     }
 
     .detail_grid{
@@ -226,6 +225,17 @@ main {
       row-gap: 1.5%;
       margin-bottom: 4em;
     }
+  }
+  h2{
+    font-family: 'Anton', sans-serif;
+    font-size: 1.5rem;
+    padding-left: 5%;
+  }
+  .all_videos{
+    gap: 2%;
+    padding: 5%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 2fr));
   }
 }
 
@@ -242,15 +252,5 @@ main {
 /* Mobile */
 @media screen and (max-width: 576px) {
 
-  h2{
-    font-family: 'Anton', sans-serif;
-    font-size: 1.5rem;
-    padding-left: 5%;
-  }
-  .all_videos{
-    gap: 2%;
-    padding: 5%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 2fr));
-  }
+  
 }
