@@ -20,8 +20,10 @@ class MovieListItem extends Component {
     render() {
         return (
             <div className="movieItem">
-                <img src={`http://image.tmdb.org/t/p/w200/` + this.props.img} alt="" />
-                <p className="vote">{this.props.vote}</p>
+                <figcaption className="img-body">
+                    <img src={`http://image.tmdb.org/t/p/w200/` + this.props.img} alt="" />
+                    <p className="vote">{this.props.vote}</p>
+                </figcaption>
                 <p className="release-genre">
                     <span>{this.props.release} — </span>
                     {this.props.genre.map((genre, i) => {
