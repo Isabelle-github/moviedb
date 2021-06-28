@@ -43,7 +43,7 @@ const deStrings =
 {
     popularTitle: 'Beliebte Filme',
     searchPlaceholder: 'Suche etwas',
-    MovieDetailRelease: 'Veröffentlichung'
+    movieDetailRelease: 'Veröffentlichung'
 
 }
 
@@ -51,7 +51,7 @@ const enStrings =
 {
     popularTitle: 'Popular movies',
     searchPlaceholder: 'Search something',
-    MovieDetailRelease: 'Release Date'
+    movieDetailRelease: 'Release Date'
 }
 
 

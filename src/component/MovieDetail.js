@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import apiKey from '../data/apiKey';
-import Footer from './Footer';
-import Header from './Header';
+// import Footer from './Footer';
+// import Header from './Header';
 import Trailer from './Trailer';
 
 import getString from '../data/strings'
@@ -63,6 +63,11 @@ class MovieDetail extends Component {
                     </div>
 
                 </div>
+                <div>
+                    <h2>All Trailers</h2>
+                    <Trailer movie_id={this.props.match.params.id} imgSrc={this.state.data.poster_path}></Trailer>
+                </div>
+
             </div>
         );
     }
