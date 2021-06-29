@@ -3,7 +3,7 @@ import searchIcon from '../img/searchIcon.svg';
 import Select from 'react-select';
 import getString from '../data/strings';
 import { Link } from "react-router-dom";
-import germanImg from '../img/german.png'
+// import germanImg from '../img/german.png'
 
 
 class Header extends Component {

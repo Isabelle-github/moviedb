@@ -14,9 +14,6 @@ class MovieListItem extends Component {
         // console.log(this.props.genre)
     }
 
-
-
-
     render() {
         return (
             <div className="movieItem">

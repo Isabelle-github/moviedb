@@ -78,14 +78,19 @@ const deStrings =
     popularSeriesTitle: 'Beliebte Serien',
     popularLinkMovies: 'Beliebte Filme',
     popularLinkSeries: 'Beliebte Serien',
+    popularMoviesNotFoundText: 'Es wurde keinen Film gefunden, der Ihrer Suche entspricht 😟 , werfen Sie stattdessen einen Blick auf die folgenden beliebten Filme!',
+    popularSeriesNotFoundText: 'Es wurde keine Serie gefunden, die Ihrer Suche entspricht 😟 , werfen Sie stattdessen einen Blick auf die folgenden beliebten Serien!',
+
     //Detail
     movieDetailRelease: 'Veröffentlichung',
     movieDetailGenre: 'Genre',
     movieDetailOverview: 'Übersicht',
     movieDetailVoting: 'Durschnittsbewertung',
-    movieDetailTrailer: 'Alle Trailer',
+    movieDetailTrailer: 'Alle Trailers',
     //Footer
-    footerImprint: 'Impressum'
+    footerImprint: 'Impressum',
+    //404
+    Error404Text: 'Haben Sie sich auf dem Weg zu Snacks verlaufen?'
 }
 
 const enStrings =
@@ -97,6 +102,8 @@ const enStrings =
     popularSeriesTitle: 'Popular series',
     popularLinkMovies: 'Popular movies',
     popularLinkSeries: 'Popular series',
+    popularMoviesNotFoundText: 'No Movie found that matches your Search 😟 , take a look at the following popular Movies instead!',
+    popularSeriesNotFoundText: 'No Series where found to match your Search 😟 , take a look at the following popular Series instead!',
     //Detail
     movieDetailRelease: 'Release Date',
     movieDetailGenre: 'Genres',
@@ -104,64 +111,78 @@ const enStrings =
     movieDetailVoting: 'Average Voting',
     movieDetailTrailer: 'All Trailers',
     //Footer
-    footerImprint: 'Imprint'
+    footerImprint: 'Imprint',
+    //404
+    Error404Text: 'Did you get lost on your way to get some snacks?'
 }
 
 const ruStrings =
 {
-     //Header
-     searchPlaceholder: 'поиск',
-     //Main
-     popularTitle: 'Популярные фильмы',
-     popularSeriesTitle: 'Популярные серии',
-     popularLinkMovies: 'Популярные фильмы',
-     popularLinkSeries: 'Популярные серии',
-     //Detail
-     movieDetailRelease: 'Дата выхода',
-     movieDetailGenre: 'Жанры',
-     movieDetailOverview: 'Обзор',
-     movieDetailVoting: 'Среднее голосование',
-     movieDetailTrailer: 'Все трейлеры',
-     //Footer
-     footerImprint: 'Оттиск'
+    //Header
+    searchPlaceholder: 'поиск',
+    //Main
+    popularTitle: 'Популярные фильмы',
+    popularSeriesTitle: 'Популярные серии',
+    popularLinkMovies: 'Популярные фильмы',
+    popularLinkSeries: 'Популярные серии',
+    popularMoviesNotFoundText: 'Не найдено ни одного фильма, соответствующего вашему запросу, вместо этого посмотрите следующие популярные фильмы!',
+    popularSeriesNotFoundText: 'Не найдено ни одной серии, соответствующей вашему запросу 😟, взгляните на следующую популярную серию!',
+    //Detail
+    movieDetailRelease: 'Дата выхода',
+    movieDetailGenre: 'Жанры',
+    movieDetailOverview: 'Обзор',
+    movieDetailVoting: 'Среднее голосование',
+    movieDetailTrailer: 'Все трейлеры',
+    //Footer
+    footerImprint: 'Оттиск',
+    //404
+    Error404Text: 'Вы заблудились по дороге, чтобы перекусить?'
 }
 
 const frStrings =
 {
-     //Header
-     searchPlaceholder: 'Recherche',
-     //Main
-     popularTitle: 'Films populaires',
-     popularSeriesTitle: 'Séries populaires',
-     popularLinkMovies: 'Films populaires',
-     popularLinkSeries: 'Séries populaires',
-     //Detail
-     movieDetailRelease: 'date de sortie',
-     movieDetailGenre: 'Genres',
-     movieDetailOverview: 'Vue d`ensemble',
-     movieDetailVoting: 'Average Voting',
-     movieDetailTrailer: 'Vote moyen',
-     //Footer
-     footerImprint: 'Impression'
+    //Header
+    searchPlaceholder: 'Recherche',
+    //Main
+    popularTitle: 'Films populaires',
+    popularSeriesTitle: 'Séries populaires',
+    popularLinkMovies: 'Films populaires',
+    popularLinkSeries: 'Séries populaires',
+    popularMoviesNotFoundText: "Aucun film ne correspond à votre recherche 😟 , jetez plutôt un coup d'œil sur les films populaires suivants !",
+    popularSeriesNotFoundText: "Aucune série ne correspond à votre recherche 😟 , jetez plutôt un coup d'œil sur les séries populaires suivantes !",
+    //Detail
+    movieDetailRelease: 'Date de sortie',
+    movieDetailGenre: 'Genres',
+    movieDetailOverview: `Vue d'ensemble`,
+    movieDetailVoting: 'Vote en Moyenne',
+    movieDetailTrailer: 'Tous les Trailers',
+    //Footer
+    footerImprint: 'Impression',
+    //404
+    Error404Text: 'Vous êtes-vous perdu en allant chercher de quoi grignoter?'
 }
 
 const nlStrings =
 {
-     //Header
-     searchPlaceholder: 'Zoek iets',
-     //Main
-     popularTitle: 'Populaire films',
-     popularSeriesTitle: 'Populaire series',
-     popularLinkMovies: 'Populaire films',
-     popularLinkSeries: 'Populaire series',
-     //Detail
-     movieDetailRelease: 'releasedatum',
-     movieDetailGenre: 'Genres',
-     movieDetailOverview: 'Overzicht',
-     movieDetailVoting: 'Gemiddelde stemming',
-     movieDetailTrailer: 'Alle Aanhangwagens',
-     //Footer
-     footerImprint: 'Afdruk'
+    //Header
+    searchPlaceholder: 'Zoek iets',
+    //Main
+    popularTitle: 'Populaire films',
+    popularSeriesTitle: 'Populaire series',
+    popularLinkMovies: 'Populaire films',
+    popularLinkSeries: 'Populaire series',
+    popularMoviesNotFoundText: 'Geen film gevonden die overeenkomt met uw zoekopdracht 😟 , bekijk in plaats daarvan de volgende populaire films!',
+    popularSeriesNotFoundText: 'Er zijn geen series gevonden die overeenkomen met uw zoekopdracht 😟 , bekijk in plaats daarvan de volgende populaire series!',
+    //Detail
+    movieDetailRelease: 'Releasedatum',
+    movieDetailGenre: 'Genres',
+    movieDetailOverview: 'Overzicht',
+    movieDetailVoting: 'Gemiddelde stemming',
+    movieDetailTrailer: 'Alle Aanhangwagens',
+    //Footer
+    footerImprint: 'Afdruk',
+    //404
+    Error404Text: 'Ben je verdwaald op weg naar wat snacks?'
 }
 
 

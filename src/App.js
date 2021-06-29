@@ -6,7 +6,7 @@ import './App.scss';
 // } from "react-router-dom";
 
 import MovieDBView from './component/MovieDBView';
-import MovieDetail from './component/MovieDetail';
+// import MovieDetail from './component/MovieDetail';
 
 function App() {
   if (!localStorage.getItem('preferredLanguage')) {

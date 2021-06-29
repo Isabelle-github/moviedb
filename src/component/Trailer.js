@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import apiKey from '../data/apiKey';
 import NoVideo from '../img/NoVideo.png';
+import Error_404 from './Error404';
 class Trailer extends Component {
     state = {
         video_trailers: [],
@@ -12,13 +13,13 @@ class Trailer extends Component {
         const response = await fetch(`https://api.themoviedb.org/3/movie/${this.props.movie_id}/videos?api_key=${apiKey}`)
         const json = await response.json()
         // console.log(json)
-        if (json !== undefined) {
+        if (json !== undefined && this.state.video_trailers !== undefined) {
             this.setState({ video_trailers: json.results });
             //console.log(json.results)
 
-            const arr = this.state.video_trailers.map((obj) => {
-                return obj.key;
-            });
+            // const arr = this.state.video_trailers.map((obj) => {
+            //     return obj.key;
+            // });
             //console.log(arr)
 
             // this.setState({ video_keys: arr });
@@ -32,18 +33,23 @@ class Trailer extends Component {
 
     render() {
         return (
-            this.state.video_trailers.length !== 0 ?
-                <article className='all_videos'>
-                    {
-                        this.state.video_trailers.map(trailerInfo => {
-                            return (<div key={trailerInfo.id}>
-                                <iframe width="400" height="300" src={`https://www.youtube.com/embed/${trailerInfo.key}`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-                            </div>)
-                        })
-                    }
-                </article> : <article className='all_videos'>
-                    <img src={NoVideo} alt='NoVideoFound'></img>
-                </article>
+            this.state.video_trailers == undefined ? <Error_404></Error_404> :
+                this.state.video_trailers.length !== 0 ?
+                    <article className='all_videos'>
+                        {
+                            this.state.video_trailers.map(trailerInfo => {
+                                return (<div className='video-box' key={trailerInfo.id}>
+                                    <iframe width="300" src={`https://www.youtube.com/embed/${trailerInfo.key}`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                                </div>)
+                            })
+                        }
+                    </article> :
+                    <article className='all_videos'>
+                        <div className='video-box'>
+                            <img src={NoVideo} alt='NoVideoFound'></img>
+                        </div>
+                    </article>
+
         );
     }
 }
