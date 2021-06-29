@@ -111,7 +111,7 @@ const enStrings =
     movieDetailOverview: 'Overview',
     movieDetailVoting: 'Average Voting',
     movieDetailTrailer: 'All Trailers',
-    noTrailerFound: 'Unfortunately no trailers were found.',
+    noTrailerFound: 'Sorry, no trailers found.',
     //Footer
     footerImprint: 'Imprint',
     //404
@@ -135,7 +135,7 @@ const ruStrings =
     movieDetailOverview: 'Обзор',
     movieDetailVoting: 'Среднее голосование',
     movieDetailTrailer: 'Все трейлеры',
-    noTrailerFound: 'К сожалению, трейлеров не обнаружено.',
+    noTrailerFound: 'К сожалению, трейлеры не найдены.',
     //Footer
     footerImprint: 'Оттиск',
     //404
@@ -183,11 +183,11 @@ const nlStrings =
     movieDetailOverview: 'Overzicht',
     movieDetailVoting: 'Gemiddelde stemming',
     movieDetailTrailer: 'Alle Aanhangwagens',
-    noTrailerFound: 'Helaas zijn er geen trailers gevonden.',
+    noTrailerFound: 'Sorry, geen trailers gevonden.',
     //Footer
-    footerImprint: 'Afdruk',
+    footerImprint: 'Impressum',
     //404
-    Error404Text: 'Ben je verdwaald op weg naar wat snacks?'
+    Error404Text: 'Ben je verdwaald op weg naar de snacks?'
 }
 
 
