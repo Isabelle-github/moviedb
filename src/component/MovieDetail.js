@@ -13,6 +13,7 @@ class MovieDetail extends Component {
         this.state = {
             data: [],
             genres: [],
+            trailer: [],
             lang: localStorage.getItem("preferredLanguage") ? localStorage.getItem("preferredLanguage") : "de"
         }
 
@@ -21,16 +22,20 @@ class MovieDetail extends Component {
 
 
     async componentDidMount() {
-        console.log(this.props.from)
         const response = await fetch(`https://api.themoviedb.org/3/movie/${this.props.match.params.id}?api_key=${apiKey}&language=${this.state.lang}`)
-        const json = await response.json()
-        this.setState({ data: json });
-        this.setState({ genres: json.genres });
-        // console.log(this.state.genres)
+        if (response.status === 200) {
+            const json = await response.json()
+            this.setState({ data: json });
+            this.setState({ genres: json.genres });
+        } else if (response.status === 404) {
+            console.log("404")
+        } else {
+            console.log("other")
+        }
     }
 
     componentDidUpdate() {
-        console.log(this.props.from)
+        // console.log(this.props.from)
     }
 
     render() {

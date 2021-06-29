@@ -23,7 +23,7 @@ function getDeForId(id) {
     // console.log(id)
 
     for (const [key, value] of Object.entries(deStrings)) {
-        console.log(`${key}: ${value}`)
+        // console.log(`${key}: ${value}`)
         if (id === key) {
             return value
         }
@@ -38,7 +38,7 @@ function getDeForId(id) {
 }
 function getEnForId(id) {
     for (const [key, value] of Object.entries(enStrings)) {
-        console.log(`${key}: ${value}`)
+        // console.log(`${key}: ${value}`)
         if (id === key) {
             return value
         }
@@ -46,7 +46,7 @@ function getEnForId(id) {
 }
 function getRuForId(id) {
     for (const [key, value] of Object.entries(ruStrings)) {
-        console.log(`${key}: ${value}`)
+        // console.log(`${key}: ${value}`)
         if (id === key) {
             return value
         }
@@ -54,7 +54,7 @@ function getRuForId(id) {
 }
 function getFrForId(id) {
     for (const [key, value] of Object.entries(frStrings)) {
-        console.log(`${key}: ${value}`)
+        // console.log(`${key}: ${value}`)
         if (id === key) {
             return value
         }
@@ -62,7 +62,7 @@ function getFrForId(id) {
 }
 function getNlForId(id) {
     for (const [key, value] of Object.entries(nlStrings)) {
-        console.log(`${key}: ${value}`)
+        // console.log(`${key}: ${value}`)
         if (id === key) {
             return value
         }
@@ -86,7 +86,8 @@ const deStrings =
     movieDetailGenre: 'Genre',
     movieDetailOverview: 'Übersicht',
     movieDetailVoting: 'Durschnittsbewertung',
-    movieDetailTrailer: 'Alle Trailer',
+    movieDetailTrailer: 'Alle Trailers',
+    noTrailerFound: 'Leider keine Trailer gefunden.',
     //Footer
     footerImprint: 'Impressum',
     //404
@@ -110,6 +111,7 @@ const enStrings =
     movieDetailOverview: 'Overview',
     movieDetailVoting: 'Average Voting',
     movieDetailTrailer: 'All Trailers',
+    noTrailerFound: 'Leider keine Trailer gefunden.',
     //Footer
     footerImprint: 'Imprint',
     //404
@@ -133,6 +135,7 @@ const ruStrings =
     movieDetailOverview: 'Обзор',
     movieDetailVoting: 'Среднее голосование',
     movieDetailTrailer: 'Все трейлеры',
+    noTrailerFound: 'Leider keine Trailer gefunden.',
     //Footer
     footerImprint: 'Оттиск',
     //404
@@ -156,6 +159,7 @@ const frStrings =
     movieDetailOverview: `Vue d'ensemble`,
     movieDetailVoting: 'Vote en Moyenne',
     movieDetailTrailer: 'Tous les Trailers',
+    noTrailerFound: 'Leider keine Trailer gefunden.',
     //Footer
     footerImprint: 'Impression',
     //404
@@ -179,6 +183,7 @@ const nlStrings =
     movieDetailOverview: 'Overzicht',
     movieDetailVoting: 'Gemiddelde stemming',
     movieDetailTrailer: 'Alle Aanhangwagens',
+    noTrailerFound: 'Leider keine Trailer gefunden.',
     //Footer
     footerImprint: 'Afdruk',
     //404
