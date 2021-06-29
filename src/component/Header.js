@@ -14,18 +14,28 @@ import netherlandImg from '../img/netherlands.png';
 class Header extends Component {
 
     options = [
-        { value: 'en', label: <div className="icon-language">
-            <img src={englandImg} height="25px" width="30px" alt="#english"/>English</div>},
-        { value: 'de', label: <div className="icon-language">
-            <img src={germanImg} height="20px" width="30px" alt="#german"/>Deutsch</div>},
-        { value: 'ru', label: <div className="icon-language">
-            <img src={russiaImg} height="25px" width="30px" alt="#russian"/>Русский</div>},
-        { value: 'fr', label: <div className="icon-language">
-            <img src={franceImg} height="25px" width="30px" alt="#french"/>Français</div>},
-        { value: 'nl', label: <div className="icon-language">
-            <img src={netherlandImg} height="25px" width="30px" alt="#netherlands"/>Nederlands</div>}
+        {
+            value: 'en', label: <div className="icon-language">
+                <img src={englandImg} height="25px" width="30px" alt="#english" />English</div>
+        },
+        {
+            value: 'de', label: <div className="icon-language">
+                <img src={germanImg} height="20px" width="30px" alt="#german" />Deutsch</div>
+        },
+        {
+            value: 'ru', label: <div className="icon-language">
+                <img src={russiaImg} height="25px" width="30px" alt="#russian" />Русский</div>
+        },
+        {
+            value: 'fr', label: <div className="icon-language">
+                <img src={franceImg} height="25px" width="30px" alt="#french" />Français</div>
+        },
+        {
+            value: 'nl', label: <div className="icon-language">
+                <img src={netherlandImg} height="25px" width="30px" alt="#netherlands" />Nederlands</div>
+        }
     ]
-    
+
     customLangStyle = {
         option: (provided, state) => ({
             ...provided,
@@ -38,21 +48,21 @@ class Header extends Component {
             const opacity = state.isDisabled ? 0.5 : 1;
             const transition = 'opacity 300ms';
             return { ...provided, opacity, transition };
-         },
-         menu: (provided, state) => ({
+        },
+        menu: (provided, state) => ({
             ...provided,
             padding: 5,
             background: '#24323F',
-          }),
-          dropdownIndicator: (provided, state) => ({
+        }),
+        dropdownIndicator: (provided, state) => ({
             ...provided,
-          }),
-          control: (provided, state) => ({
+        }),
+        control: (provided, state) => ({
             ...provided,
             background: state.isSelected ? '#24323F' : '#24323F',
             border: '1px solid #21E18C',
-          }),
-        }
+        }),
+    }
 
     state = {
         lang: localStorage.getItem('preferredLanguage')
@@ -68,7 +78,7 @@ class Header extends Component {
 
     render() {
         console.log(this.customLangStyle)
-       
+
         return (
             <header>
                 <Link to='/'>
@@ -76,18 +86,18 @@ class Header extends Component {
                 </Link>
                 <div className='search-box'>
                     <div className='search-icon-box'><img src={searchIcon} alt="a search icon"></img></div>
-                    <input 
-                    type="text" 
-                    placeholder={getString('searchPlaceholder')} 
-                    onChange={(e) => this.changeSearchInput(e.target.value)}>
+                    <input
+                        type="text"
+                        placeholder={getString('searchPlaceholder')}
+                        onChange={(e) => this.changeSearchInput(e.target.value)}>
                     </input>
                 </div>
-                <Select 
-                className="langSelect" 
-                options={this.options} 
-                styles={this.customLangStyle} 
-                placeholder={this.state.lang} 
-                onChange={(e) => this.handleLangChange(e)} 
+                <Select
+                    className="langSelect"
+                    options={this.options}
+                    styles={this.customLangStyle}
+                    placeholder={this.state.lang}
+                    onChange={(e) => this.handleLangChange(e)}
                 />
             </header>
         );

@@ -3,6 +3,7 @@ import apiKey from "../data/apiKey";
 import MovieListItem from "./MovieListItem";
 import getString from '../data/strings';
 
+
 import {
     Link
 } from "react-router-dom";
@@ -28,12 +29,14 @@ class PopularSeries extends Component {
     }
 
     render() {
+        let foundSeries = this.state.popularSeries.filter(series => series.name.toLowerCase().includes(this.props.searchInput.toLowerCase()));
+        //console.log(foundSeries);
         return (
             <main>
                 <h1>{getString('popularSeriesTitle')}</h1>
                 <div className="body-movies">
 
-                    {this.state.popularSeries.filter(series => series.name.toLowerCase().includes(this.props.searchInput.toLowerCase())).map(series => {
+                    {(foundSeries.length !== 0 ? foundSeries.map(series => {
                         let newGenreListForSeries = []
                         this.state.genreList.forEach(genreId => {
                             // console.log("genreID from List")
@@ -64,7 +67,45 @@ class PopularSeries extends Component {
                                 genre={newGenreListForSeries}
                                 from={'fromSeries'} />
                         </Link>
-                    })}
+                    }) :
+                        <div className='body-found-movies'>
+                            <h2>{getString('popularSeriesNotFoundText')}</h2>
+                            <div className="body-movies">
+                                {
+                                    this.state.popularSeries.map(series => {
+                                        let newGenreListForSeries = []
+                                        this.state.genreList.forEach(genreId => {
+                                            // console.log("genreID from List")
+                                            // console.log(genreId)
+                                            series.genre_ids.forEach(id => {
+                                                // console.log("movie id for each")
+                                                // console.log(`before possible hit id:${id} genreId:${genreId}`)
+                                                if (genreId.id === id) {
+                                                    // console.log("hit")
+                                                    newGenreListForSeries.push(genreId.name)
+                                                }
+                                            })
+                                        })
+                                        // console.log(newGenreListForMovie)
+
+                                        let releaseYear = series.first_air_date
+                                        if (typeof releaseYear === 'string') {
+                                            releaseYear = releaseYear.substr(0, 4)
+                                            console.log(releaseYear)
+                                        }
+
+                                        return <Link key={series.id} to={`/detail/${series.id}`}>
+                                            <MovieListItem key={series.id}
+                                                img={series.poster_path}
+                                                name={series.name}
+                                                vote={series.vote_average}
+                                                release={releaseYear}
+                                                genre={newGenreListForSeries} />
+                                        </Link>
+                                    })
+                                }
+                            </div>
+                        </div>)}
                 </div>
             </main>
         );
