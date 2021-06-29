@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import apiKey from "../data/apiKey";
 import MovieListItem from "./MovieListItem";
+import getString from '../data/strings';
 
 import {
     Link
@@ -29,7 +30,7 @@ class PopularSeries extends Component {
     render() {
         return (
             <main>
-                <h1>Popular series</h1>
+                <h1>{getString('popularSeriesTitle')}</h1>
                 <div className="body-movies">
 
                     {this.state.popularSeries.filter(series => series.name.toLowerCase().includes(this.props.searchInput.toLowerCase())).map(series => {

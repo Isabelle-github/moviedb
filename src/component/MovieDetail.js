@@ -3,8 +3,7 @@ import apiKey from '../data/apiKey';
 // import Footer from './Footer';
 // import Header from './Header';
 import Trailer from './Trailer';
-
-import getString from '../data/strings'
+import getString from '../data/strings';
 
 
 class MovieDetail extends Component {
@@ -48,7 +47,7 @@ class MovieDetail extends Component {
                     <div className='detail_grid box_right'>
                         <h2>{getString('movieDetailRelease')}</h2>
                         <p>{this.state.data.release_date}</p>
-                        <h2>Genres</h2>
+                        <h2>{getString('movieDetailGenre')}</h2>
                         <p>{this.state.genres.map((genre, i) => {
                             if (i === this.state.genres.length - 1) {
                                 return <span key={i}>{genre.name}</span>
@@ -56,14 +55,14 @@ class MovieDetail extends Component {
                                 return <span key={i}>{genre.name}, </span>
                             }
                         })}</p>
-                        <h2>Overview</h2>
+                        <h2>{getString('movieDetailOverview')}</h2>
                         <p>{this.state.data.overview}</p>
-                        <h2>Average Voting</h2>
+                        <h2>{getString('movieDetailVoting')}</h2>
                         <p>{this.state.data.vote_average}</p>
                     </div>
                 </div>
                 <div>
-                    <h2>All Trailers</h2>
+                    <h2>{getString('movieDetailTrailer')}</h2>
                     <Trailer movie_id={this.props.match.params.id} imgSrc={this.state.data.poster_path}></Trailer>
                 </div>
 

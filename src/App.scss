@@ -67,70 +67,23 @@ header{
       }
     }
   }
-
   a:active, a:visited, a{
     text-decoration: none;
     color: $font-color;
     font-size: 1.5em;
     outline-style: none;
   }
-
   .langSelect {
-    min-width: 100px;
-    
-    border-color: $accent-color;
-    &::selection {
-      outline-style: none;
+    min-width: 120px;
+  }
+  .icon-language {
+    text-align: center;
+    display: flex;
+    font-size: .8rem;
+    img {
+      padding-right: 7px;
     }
-    
   }
-  .css-yk16xz-control {
-    outline-style: none;
-    background: $main-background;
-    border-color: $accent-color;
-    
-  }
-  /* .css-2b097c-container {
-    background: red;
-  } */
-}
-/* .css-26l3qy-menu {
-  background: red;
-} */
-.css-1f43avz-a11yText-A11yText {
-  background: red;
-  outline-style: none;
-  border-color: $accent-color;
-}
-/* .css-b8ldur-Input {
-  background: red;
-} */
-#react-select-3-input {
-  outline-style: none;
-  background: $main-background;
-  border-color: $accent-color;
-}
-.css-yk16xz-control {
-  background: #21E18C;
-}
-.css-1pahdxg-control {
-  background: red;
-  outline-style: none;
-}
-.css-g1d714-ValueContainer {
-  background: $main-background;
-  outline-style: none;
-  margin: 0;
-}
-.css-1hb7zxy-IndicatorsContainer {
-  background: $main-background;
-  margin: 2px;
-}
-/* .css-tlfecz-indicatorContainer {
-  background: $main-background;
-} */
-.css-1okebmr-indicatorSeparator {
-  outline-style: none;
 }
 
 /* -----Main---------- */
@@ -273,7 +226,6 @@ main {
         object-position: center;
       }
     }
-
     .detail_grid{
       display: grid;
       grid-template-columns: 1fr 2fr;
