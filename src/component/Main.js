@@ -61,7 +61,8 @@ class Main extends Component {
                                 name={movie.title}
                                 vote={movie.vote_average}
                                 release={releaseYear}
-                                genre={newGenreListForMovie} />
+                                genre={newGenreListForMovie}
+                                from={'fromMovie'} />
                         </Link>
                     })}
                 </div>

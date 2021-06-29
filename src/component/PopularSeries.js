@@ -60,7 +60,8 @@ class PopularSeries extends Component {
                                 name={series.name}
                                 vote={series.vote_average}
                                 release={releaseYear}
-                                genre={newGenreListForSeries} />
+                                genre={newGenreListForSeries}
+                                from={'fromSeries'} />
                         </Link>
                     })}
                 </div>
