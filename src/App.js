@@ -12,6 +12,9 @@ function App() {
   if (!localStorage.getItem('preferredLanguage')) {
     localStorage.setItem('preferredLanguage', 'de')
   }
+  if (!localStorage.getItem('selectedNav')) {
+    localStorage.setItem('selectedNav', '0')
+  }
   return (
     <MovieDBView />
   );

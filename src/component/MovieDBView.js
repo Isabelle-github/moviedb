@@ -19,7 +19,7 @@ class MovieDBView extends Component {
 
     state = {
         searchInput: "",
-        selectedNav: 0
+        selectedNav: Number(localStorage.getItem('selectedNav'))
     }
 
     setSearchInput = (searchInput) => {
@@ -33,6 +33,7 @@ class MovieDBView extends Component {
 
     setNav = (selectedNav) => {
         // console.log(selectedNav)
+        localStorage.setItem('selectedNav', selectedNav)
         this.setState({ selectedNav: selectedNav });
     }
 
