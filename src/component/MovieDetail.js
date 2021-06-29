@@ -66,7 +66,7 @@ class MovieDetail extends Component {
                         <p>{this.state.data.vote_average}</p>
                     </div>
                 </div>
-                <div>
+                <div className='contain-videos'>
                     <h2>{getString('movieDetailTrailer')}</h2>
                     <Trailer movie_id={this.props.match.params.id} imgSrc={this.state.data.poster_path}></Trailer>
                 </div>

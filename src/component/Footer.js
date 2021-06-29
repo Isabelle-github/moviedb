@@ -11,10 +11,10 @@ class Footer extends Component {
     render() {
         return (
             <footer className="foot-style">
-                {/* <Link to='/'>
+                <Link to='/'>
                     <h1><span className="dot">.</span>MOV</h1>
-                </Link> */}
-                <h1><span className="dot">. </span>MOV</h1>
+                </Link>
+                {/* <h1><span className="dot">. </span>MOV</h1> */}
                 <p>{getString('footerImprint')}</p>
                 <div className="socialmedia-icon">
                     <a href="instagram"><img src="./img/instagram.png" alt="" /></a>

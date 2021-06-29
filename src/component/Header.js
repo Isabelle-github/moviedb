@@ -43,11 +43,14 @@ class Header extends Component {
             padding: 5,
             margin: 0,
             background: state.isSelected ? '#24323F' : '#384a5c',
+            background: state.isFocused ? '#384a5c' : '#24323F',
         }),
         singleValue: (provided, state) => {
             const opacity = state.isDisabled ? 0.5 : 1;
             const transition = 'opacity 300ms';
             return { ...provided, opacity, transition };
+          /*   ...provided,
+            background: state.isSelected ? '#384a5c' : '#384a5c', */
         },
         menu: (provided, state) => ({
             ...provided,
