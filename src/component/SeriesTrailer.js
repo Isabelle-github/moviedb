@@ -3,7 +3,7 @@ import apiKey from '../data/apiKey';
 import NoVideo from '../img/NoVideo.png';
 import Error404 from './Error404';
 import getString from '../data/strings'
-class Trailer extends Component {
+class SeriesTrailer extends Component {
     state = {
         video_trailers: [],
         lang: localStorage.getItem("preferredLanguage")
@@ -12,7 +12,7 @@ class Trailer extends Component {
     }
 
     async componentDidMount() {
-        const response = await fetch(`https://api.themoviedb.org/3/movie/${this.props.movie_id}/videos?api_key=${apiKey}&language=${this.state.lang}`)
+        const response = await fetch(`https://api.themoviedb.org/3/tv/${this.props.movie_id}/videos?api_key=${apiKey}&language=${this.state.lang}`)
         const json = await response.json()
         if (json !== undefined && this.state.video_trailers !== undefined) {
             this.setState({ video_trailers: json.results });
@@ -31,6 +31,7 @@ class Trailer extends Component {
             // console.log(this.state.chosen_key)
         }
     }
+
 
     render() {
         return (
@@ -55,4 +56,4 @@ class Trailer extends Component {
     }
 }
 
-export default Trailer;
+export default SeriesTrailer;
