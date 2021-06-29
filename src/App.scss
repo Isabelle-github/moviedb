@@ -474,10 +474,14 @@ main {
 
   //Nav
   .nav {
-    padding: 5%;
+    display: flex;
+    justify-content:space-between;
+    padding: 1%;
 
     a {
-      font-size: 1.2rem;
+      font-size: 1rem;
+      padding: 1%;
+      width: 40%;
     }
 
   }
