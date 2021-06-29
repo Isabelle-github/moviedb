@@ -84,6 +84,7 @@ header{
       padding-right: 7px;
     }
   }
+
 }
 
 /* -----Main---------- */
@@ -284,13 +285,24 @@ main {
 
   a {
     color: $font-color;
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-decoration: none;
-
+    border: 1px solid $accent-color;
+    border-radius: 5px;
+    padding: 5px 20px 10px;
+    background: $dark-background;
     &:hover {
       color: $accent-color;
+      box-shadow: rgba(99, 97, 97, 0.56) 0px 12px 30px 4px;
     }
+    &:active {
+      color: $accent-color;
+    }
+   /*  &:visited {
+      color: $accent-color;
+    } */
   }
+  
 
 }
 
