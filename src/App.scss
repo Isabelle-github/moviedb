@@ -256,11 +256,16 @@ main {
     padding-left: 5%;
   }
   .all_videos{
-    overflow: scroll;
+    // overflow: scroll;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
     gap: 2%;
     padding: 5%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+    gap:2em;
+    // display: grid;
+    // grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
     .video-box{
       margin: 0 auto;
       img{
@@ -387,7 +392,7 @@ main {
       padding-top: 3%;
     }
     .contain_details{
-      width: 90%;
+      width: 100%;
       display: flex;
       justify-content: space-between;
       flex-direction: column;
@@ -399,7 +404,8 @@ main {
         font-size: 1.2rem;
       }
       .box_left{
-        width: 100%;
+        width: 90%;
+        margin: 0 auto;
         img{
           width: 100%;
           // height: 100%;
@@ -407,14 +413,17 @@ main {
           object-position: center;
         }
       }
-
       .detail_grid{
         padding-top: 2em;
-        display: grid;
-        grid-template-columns: 1fr 2fr;
+        display: flex;
+        flex-direction: column;
         width: 100%;
-        row-gap: 1.5%;
         margin-bottom: 2em;
+        text-align: left;
+        p{
+          padding-bottom:1em;
+          padding-left: 2em;
+        }
       }
     }
     h2{
@@ -422,16 +431,20 @@ main {
       font-size: 1.2rem;
       
     }
-    .all_videos{
-      gap: 2%;
+    .contain-videos{
+      width: 90%;
       margin: 0 auto;
-      overflow:scroll;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    .all_videos{
+      margin: 0 auto;
+      // overflow:scroll;
+      // display: grid;
+      // grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       .video-box{
         margin: 0 auto;
         img{
           width: 100%;
+          object-fit: contain;
         }
       }
     }
@@ -458,9 +471,11 @@ main {
   }
     // Errors
   .err404 {
-    min-height: 50vh;
+    min-height: 100vh;
     font-size: 1.5rem;
-    padding: 10% 15%;
+    padding: 50% 15%;
+    
+    
     img {
       width: 30%;
     }
