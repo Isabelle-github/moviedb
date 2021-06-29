@@ -15,14 +15,13 @@ class Footer extends Component {
                     <h1><span className="dot">.</span>MOV</h1>
                 </Link>
                 {/* <h1><span className="dot">. </span>MOV</h1> */}
-                <p>{getString('footerImprint')}</p>
+                <Link to='/impressum'>
+                    <p>{getString('footerImprint')}</p>
+                </Link>
                 <div className="socialmedia-icon">
                     <a href="instagram"><img src="./img/instagram.png" alt="" /></a>
                     <a href="facebook"><img src="./img/facebook.png" alt="" /></a>
                 </div>
-                <Link to='/impressum'>
-                    <p>Impressum</p>
-                </Link>
             </footer>
         );
     }
