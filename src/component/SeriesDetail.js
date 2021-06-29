@@ -36,7 +36,7 @@ class SeriesDetail extends Component {
     render() {
         return (
             <div className='movie_Details'>
-                <h1 className='detail_title'>{this.state.data.title}</h1>
+                <h1 className='detail_title'>{this.state.data.name}</h1>
                 <div className='contain_details'>
 
                     <div className='box_left'>
