@@ -56,7 +56,7 @@ class Main extends Component {
                         let releaseYear = movie.release_date
                         if (typeof releaseYear === 'string') {
                             releaseYear = releaseYear.substr(0, 4)
-                            console.log(releaseYear)
+                            // console.log(releaseYear)
                         }
 
                         return <Link key={movie.id} to={`/movie/detail/${movie.id}`}>
@@ -89,12 +89,12 @@ class Main extends Component {
                                                 }
                                             })
                                         })
-                                        console.log(newGenreListForMovie)
+                                        // console.log(newGenreListForMovie)
 
                                         let releaseYear = movie.release_date
                                         if (typeof releaseYear === 'string') {
                                             releaseYear = releaseYear.substr(0, 4)
-                                            console.log(releaseYear)
+                                            // console.log(releaseYear)
                                         }
 
                                         return <Link key={movie.id} to={`/detail/${movie.id}`}>
