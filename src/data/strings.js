@@ -185,9 +185,9 @@ const nlStrings =
     movieDetailTrailer: 'Alle Aanhangwagens',
     noTrailerFound: 'Leider keine Trailer gefunden.',
     //Footer
-    footerImprint: 'Afdruk',
+    footerImprint: 'Impressum',
     //404
-    Error404Text: 'Ben je verdwaald op weg naar wat snacks?'
+    Error404Text: 'Ben je verdwaald op weg naar de snacks?'
 }
 
 

@@ -18,7 +18,8 @@ import SeriesDetail from './SeriesDetail';
 class MovieDBView extends Component {
 
     state = {
-        searchInput: ""
+        searchInput: "",
+        selectedNav: 0
     }
 
     setSearchInput = (searchInput) => {
@@ -30,11 +31,16 @@ class MovieDBView extends Component {
         window.location.reload()
     }
 
+    setNav = (selectedNav) => {
+        // console.log(selectedNav)
+        this.setState({ selectedNav: selectedNav });
+    }
+
     render() {
         return (
             <Router>
                 <Header setSearch={(input) => this.setSearchInput(input)} setLang={(lang) => this.setLanguage(lang)}></Header>
-                <Nav></Nav>
+                <Nav setNav={(selectedNav) => this.setNav(selectedNav)} selectedNav={this.state.selectedNav}></Nav>
                 <Switch>
                     <Route path="/" exact>
                         <Main searchInput={this.state.searchInput}></Main>
