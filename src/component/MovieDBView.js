@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import Impressum from "./Impressum";
 import Header from './Header';
 import Main from './Main';
 import Footer from './Footer'
@@ -38,6 +38,9 @@ class MovieDBView extends Component {
                 <Switch>
                     <Route path="/" exact>
                         <Main searchInput={this.state.searchInput}></Main>
+                    </Route>
+                    <Route path="/impressum" exact>
+                        <Impressum></Impressum>
                     </Route>
                     <Route path="/series" exact>
                         <PopularSeries searchInput={this.state.searchInput}></PopularSeries>

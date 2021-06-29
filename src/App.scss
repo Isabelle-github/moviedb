@@ -285,6 +285,7 @@ main {
   background-color: $main-background;
   padding: 2%;
 
+
   a {
     color: $font-color;
     font-size: 1.5rem;
@@ -317,6 +318,26 @@ main {
   background-color: $main-background;
   img {
     width: 30%;
+  }
+}
+// Impressum
+.impressum{
+  text-align: center;
+  background-color: $main-background;
+  color: $font-color;
+  // font-family: 'Anton', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  h1{
+    font-family: 'Anton', sans-serif;
+  }
+  p{
+     padding: 3em;
+     width: 50%;
+     margin: 0 auto;
+  }
+  iframe{
+     border: solid 2px $accent-color;
+     margin-bottom: 3em;
   }
 }
 
@@ -499,6 +520,29 @@ main {
       width: 30%;
     }
   }
+    // Impressum
+  .impressum{
+    text-align: center;
+    background-color: $main-background;
+    color: $font-color;
+    // font-family: 'Anton', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    h1{
+      padding-top: 1%;
+      font-family: 'Anton', sans-serif;
+      font-size: 1.5rem;
+    }
+    p{
+      padding: 1.5em;
+      width: 80%;
+      margin: 0 auto;
+    }
+    iframe{
+      border: solid 2px $accent-color;
+      margin-bottom: 3em;
+      width: 80%;
+    }
+}
 
 
 }

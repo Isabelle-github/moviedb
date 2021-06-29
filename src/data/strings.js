@@ -111,7 +111,7 @@ const enStrings =
     movieDetailOverview: 'Overview',
     movieDetailVoting: 'Average Voting',
     movieDetailTrailer: 'All Trailers',
-    noTrailerFound: 'Leider keine Trailer gefunden.',
+    noTrailerFound: 'Unfortunately no trailers were found.',
     //Footer
     footerImprint: 'Imprint',
     //404
@@ -135,7 +135,7 @@ const ruStrings =
     movieDetailOverview: 'Обзор',
     movieDetailVoting: 'Среднее голосование',
     movieDetailTrailer: 'Все трейлеры',
-    noTrailerFound: 'Leider keine Trailer gefunden.',
+    noTrailerFound: 'К сожалению, трейлеров не обнаружено.',
     //Footer
     footerImprint: 'Оттиск',
     //404
@@ -159,7 +159,7 @@ const frStrings =
     movieDetailOverview: `Vue d'ensemble`,
     movieDetailVoting: 'Vote en Moyenne',
     movieDetailTrailer: 'Tous les Trailers',
-    noTrailerFound: 'Leider keine Trailer gefunden.',
+    noTrailerFound: "Malheureusement, aucune remorque n'a été trouvée.",
     //Footer
     footerImprint: 'Impression',
     //404
@@ -183,7 +183,7 @@ const nlStrings =
     movieDetailOverview: 'Overzicht',
     movieDetailVoting: 'Gemiddelde stemming',
     movieDetailTrailer: 'Alle Aanhangwagens',
-    noTrailerFound: 'Leider keine Trailer gefunden.',
+    noTrailerFound: 'Helaas zijn er geen trailers gevonden.',
     //Footer
     footerImprint: 'Afdruk',
     //404
