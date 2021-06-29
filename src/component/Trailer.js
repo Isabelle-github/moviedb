@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import apiKey from '../data/apiKey';
 import NoVideo from '../img/NoVideo.png';
-import Error_404 from './Error404';
+import Error404 from './Error404';
 class Trailer extends Component {
     state = {
         video_trailers: [],
@@ -33,7 +33,7 @@ class Trailer extends Component {
 
     render() {
         return (
-            this.state.video_trailers == undefined ? <Error_404></Error_404> :
+            this.state.video_trailers === undefined ? <Error404></Error404> :
                 this.state.video_trailers.length !== 0 ?
                     <article className='all_videos'>
                         {
