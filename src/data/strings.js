@@ -159,7 +159,7 @@ const frStrings =
     movieDetailOverview: `Vue d'ensemble`,
     movieDetailVoting: 'Vote en Moyenne',
     movieDetailTrailer: 'Tous les Trailers',
-    noTrailerFound: 'Désolé, aucune bande-annonce trouvée.',
+    noTrailerFound: "Malheureusement, aucune remorque n'a été trouvée.",
     //Footer
     footerImprint: 'Impression',
     //404
