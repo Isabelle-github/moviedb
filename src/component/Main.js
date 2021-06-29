@@ -59,7 +59,7 @@ class Main extends Component {
                             console.log(releaseYear)
                         }
 
-                        return <Link key={movie.id} to={`/detail/${movie.id}`}>
+                        return <Link key={movie.id} to={`/movie/detail/${movie.id}`}>
                             <MovieListItem key={movie.id}
                                 img={movie.poster_path}
                                 name={movie.title}

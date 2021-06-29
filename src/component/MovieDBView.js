@@ -13,6 +13,7 @@ import {
     Route
 } from "react-router-dom";
 import MovieDetail from './MovieDetail';
+import SeriesDetail from './SeriesDetail';
 
 class MovieDBView extends Component {
 
@@ -41,7 +42,9 @@ class MovieDBView extends Component {
                     <Route path="/series" exact>
                         <PopularSeries searchInput={this.state.searchInput}></PopularSeries>
                     </Route>
-                    <Route path="/detail/:id" component={MovieDetail} exact>
+                    <Route path="/movie/detail/:id" component={MovieDetail} exact>
+                    </Route>
+                    <Route path="/series/detail/:id" component={SeriesDetail} exact>
                     </Route>
                     <Route path="*">
                         <Error404 />

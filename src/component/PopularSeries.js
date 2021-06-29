@@ -58,7 +58,7 @@ class PopularSeries extends Component {
                             console.log(releaseYear)
                         }
 
-                        return <Link key={series.id} to={`/detail/${series.id}`}>
+                        return <Link key={series.id} to={`/series/detail/${series.id}`}>
                             <MovieListItem key={series.id}
                                 img={series.poster_path}
                                 name={series.name}
