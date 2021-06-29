@@ -78,7 +78,7 @@ const deStrings =
     popularSeriesTitle: 'Beliebte Serien',
     popularLinkMovies: 'Beliebte Filme',
     popularLinkSeries: 'Beliebte Serien',
-    popularMoviesNotFoundText: 'Es wurde keinen Film gefunden, der Ihrer Suche entspricht 😟 , werfen Sie stattdessen einen Blick auf die folgenden beliebten Filme!',
+    popularMoviesNotFoundText: 'Es wurde kein Film gefunden, der Ihrer Suche entspricht 😟 , werfen Sie stattdessen einen Blick auf die folgenden beliebten Filme!',
     popularSeriesNotFoundText: 'Es wurde keine Serie gefunden, die Ihrer Suche entspricht 😟 , werfen Sie stattdessen einen Blick auf die folgenden beliebten Serien!',
 
     //Detail
@@ -86,11 +86,11 @@ const deStrings =
     movieDetailGenre: 'Genre',
     movieDetailOverview: 'Übersicht',
     movieDetailVoting: 'Durschnittsbewertung',
-    movieDetailTrailer: 'Alle Trailers',
+    movieDetailTrailer: 'Alle Trailer',
     //Footer
     footerImprint: 'Impressum',
     //404
-    Error404Text: 'Haben Sie sich auf dem Weg zu Snacks verlaufen?'
+    Error404Text: 'Haben Sie sich auf dem Weg Snacks zu holen verlaufen?'
 }
 
 const enStrings =
@@ -125,7 +125,7 @@ const ruStrings =
     popularSeriesTitle: 'Популярные серии',
     popularLinkMovies: 'Популярные фильмы',
     popularLinkSeries: 'Популярные серии',
-    popularMoviesNotFoundText: 'Не найдено ни одного фильма, соответствующего вашему запросу, вместо этого посмотрите следующие популярные фильмы!',
+    popularMoviesNotFoundText: 'Не найдено ни одного фильма, соответствующего вашему запросу 😟, вместо этого посмотрите следующие популярные фильмы!',
     popularSeriesNotFoundText: 'Не найдено ни одной серии, соответствующей вашему запросу 😟, взгляните на следующую популярную серию!',
     //Detail
     movieDetailRelease: 'Дата выхода',
@@ -136,7 +136,7 @@ const ruStrings =
     //Footer
     footerImprint: 'Оттиск',
     //404
-    Error404Text: 'Вы заблудились по дороге, чтобы перекусить?'
+    Error404Text: 'Вы заблудились по дороге за закусками?'
 }
 
 const frStrings =
