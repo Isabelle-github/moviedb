@@ -99,7 +99,7 @@ class Header extends Component {
                     className="langSelect"
                     options={this.options}
                     styles={this.customLangStyle}
-                    placeholder={this.customLangStyle.option}
+                    placeholder={this.state.lang}
                     onChange={(e) => this.handleLangChange(e)}
                 />
             </header>
