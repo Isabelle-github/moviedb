@@ -93,8 +93,8 @@ const deStrings =
     //404
     Error404Text: 'Haben Sie sich auf dem Weg Snacks zu holen verlaufen?',
     // Impressum
-    impressumText: 'Sorry, Impressum wurde vom Waschbär geklaut',
-    impressumTitle: 'Achtung Waschbär'
+    impressumText: 'Sorry, Impressum wurde vom Waschbär geklaut.',
+    impressumTitle: '! Achtung '
 }
 
 const enStrings =
@@ -120,8 +120,8 @@ const enStrings =
     //404
     Error404Text: 'Did you get lost on your way to get some snacks?',
     // Impressum
-    impressumText: 'Sorry, Impressum was stolen by the Raccoon',
-    impressumTitle: 'Attention raccoon'
+    impressumText: 'Sorry, Impressum was stolen by the Raccoon.',
+    impressumTitle: '! Attention '
 }
 
 const ruStrings =
@@ -147,8 +147,8 @@ const ruStrings =
     //404
     Error404Text: 'Вы заблудились по дороге за закусками?',
     // Impressum
-    impressumText: 'Извините, Impressum украл Raccoon',
-    impressumTitle: 'Внимание енот'
+    impressumText: 'Извините, Оттиск украл Raccoon.',
+    impressumTitle: '! Внимание'
 }
 
 const frStrings =
@@ -174,8 +174,8 @@ const frStrings =
     //404
     Error404Text: 'Vous êtes-vous perdu en allant chercher de quoi grignoter?',
     // Impressum
-    impressumText: 'Désolé, Impressum a été volé par le raton laveur',
-    impressumTitle: 'Attention au raton laveur!'
+    impressumText: 'Désolé, Impressum a été volé par le raton laveur.',
+    impressumTitle: '! Attention '
 }
 
 const nlStrings =
@@ -201,8 +201,8 @@ const nlStrings =
     //404
     Error404Text: 'Ben je verdwaald op weg naar de snacks?',
     // Impressum
-    impressumText: 'Sorry, Impressum is gestolen door de Racoon',
-    impressumTitle: 'Aandacht wasbeer'
+    impressumText: 'Sorry, Impressum is gestolen door de Racoon.',
+    impressumTitle: '! Aandacht '
 }
 
 

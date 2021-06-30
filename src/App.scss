@@ -197,10 +197,10 @@ main {
       margin-right: 2%;
     }
   }
-  p {
+  a {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
-    margin-left: 10%;
+    margin-left: 5%;
   }
   .socialmedia-icon {
     margin-left: 25%;
@@ -328,18 +328,68 @@ main {
   font-family: 'Roboto', sans-serif;
   h1{
     font-family: 'Anton', sans-serif;
+    span {
+      font-size: 3rem;
+      font-family: 'Roboto', sans-serif;
+      font-weight: lighter;
+      position: relative;
+      bottom: -1em;
+      opacity: 0;
+    }
   }
   p{
      padding: 3em;
      width: 50%;
      margin: 0 auto;
   }
+  div {
+    font-size: 3rem;
+    padding: 2%;
+  }
   iframe{
      border: solid 2px $accent-color;
+     border-radius: 10px;
      margin-bottom: 3em;
   }
 }
+.animationR {
+  animation: move-text 0.75s infinite;
+}
+.animationA {
+  animation: move-text 0.80s infinite;
+}
+.animationC {
+  animation: move-text 0.90s infinite;
+}
+.animationC2 {
+  animation: move-text 1.00s infinite;
+}
+.animationO {
+  animation: move-text 1.10s infinite;
+}
+.animationO2 {
+  animation: move-text 1.20s infinite;
+}
+.animationN {
+  animation: move-text 1.30s infinite;
+}
 
+@keyframes move-text {
+  0% {
+    bottom: -0.2em;
+    opacity: 1;
+    color: red;
+  }
+  
+  50% {
+    bottom: 0.2em;
+  }
+
+  100% {
+    bottom: 0;
+    opacity: 1;
+  }
+}
 /* ----- media queries----- */
 @media screen and (max-width: 1200px) {
 
