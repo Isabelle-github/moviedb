@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import apiKey from '../data/apiKey';
-import NoVideo from '../img/NoVideo.png';
+// import NoVideo from '../img/NoVideo.png';
 import Error404 from './Error404';
 import getString from '../data/strings'
 class Trailer extends Component {
