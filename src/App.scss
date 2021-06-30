@@ -38,6 +38,13 @@ header{
     span{
       color:$accent-color;
     }
+
+    &:hover span {
+      animation-name: hopp;
+      animation-duration: 0.5s;
+      animation-iteration-count: 2;
+      animation-timing-function: ease-in-out;
+    }
   }
   h1:hover {
     color: $accent-color;
@@ -232,6 +239,7 @@ main {
   background-color: $main-background;
   font-family: 'Roboto', sans-serif;
   color: #FFFFFF;
+  padding: 0 4% 4% 4%;
 
   .detail_title { 
     font-family: 'Anton', sans-serif;
@@ -272,6 +280,7 @@ main {
     font-size: 1.5rem;
     padding-left: 5%;
   }
+
   .all_videos{
     // overflow: scroll;
     width: 100%;
@@ -281,14 +290,24 @@ main {
     gap: 2%;
     padding: 5%;
     gap:2em;
+    
+    .noTrailer{
+      font-family: 'Roboto', sans-serif;
+       color: #FFFFFF;
+       font-size: 1.5rem;
+       
+    }
     // display: grid;
     // grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
     .video-box{
+      
       // height: 200px;
       margin: 0 auto;
+      iframe:hover{
+        border: solid 2px $accent-color;
+      }
       img{
         width: 100%;
-        height: 100%;
       }
     }
   }
@@ -631,14 +650,20 @@ main {
     }
     .all_videos{
       margin: 0 auto;
+      .noTrailer{
+        font-family: 'Roboto', sans-serif;
+         color: #FFFFFF;
+         font-size: 1.2rem;
+         
+      }
       // overflow:scroll;
       // display: grid;
       // grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       .video-box{
-        margin: 0 auto;
+        margin: 0 auto; 
         iframe{
           width: 100%;
-          margin: 0 auto;
+          margin: 0 auto;  
         }
         img{
           width: 100%;
@@ -711,4 +736,16 @@ main {
   }
 
 
+}
+
+@keyframes hopp {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(-20%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
 }
