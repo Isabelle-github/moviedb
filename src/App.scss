@@ -93,6 +93,7 @@ main {
   background-color: $main-background;
   color: $font-color;
   padding: 0 4% 4% 4%;
+  min-height: 100vh;
   h1 {
     font-family: 'Anton', sans-serif; 
     font-size: 3rem;
@@ -270,9 +271,11 @@ main {
     // display: grid;
     // grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
     .video-box{
+      // height: 200px;
       margin: 0 auto;
       img{
         width: 100%;
+        height: 100%;
       }
     }
   }
@@ -312,6 +315,7 @@ main {
 // Errors
 .err404 {
   text-align: center;
+  min-height: 100vh;
   font-size: 3rem;
   padding: 3% 15%;
   color: $font-color;
@@ -322,6 +326,7 @@ main {
 }
 // Impressum
 .impressum{
+  min-height: 100vh;
   text-align: center;
   background-color: $main-background;
   color: $font-color;
@@ -477,6 +482,10 @@ main {
       // grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       .video-box{
         margin: 0 auto;
+        iframe{
+          width: 100%;
+          margin: 0 auto;
+        }
         img{
           width: 100%;
           object-fit: contain;
