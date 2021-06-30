@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import apiKey from "../data/apiKey";
 import MovieListItem from "./MovieListItem";
+import Nav from "./Nav";
 
 
 import {
@@ -34,6 +35,7 @@ class Main extends Component {
         // console.log(foundMovies);
         return (
             <main>
+                <Nav selectedNav={0}></Nav>
                 <h1>{getString('popularTitle')}</h1>
                 <div className="body-movies">
                     {(foundMovies.length !== 0 ? foundMovies.map(movie => {

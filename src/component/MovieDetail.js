@@ -4,6 +4,8 @@ import apiKey from '../data/apiKey';
 // import Header from './Header';
 import Trailer from './Trailer';
 import getString from '../data/strings';
+import Nav from "./Nav";
+import Error404 from './Error404';
 
 
 class MovieDetail extends Component {
@@ -29,6 +31,7 @@ class MovieDetail extends Component {
             this.setState({ genres: json.genres });
         } else if (response.status === 404) {
             console.log("404")
+            this.setState({ data: [] });
         } else {
             console.log("other")
         }
@@ -40,38 +43,46 @@ class MovieDetail extends Component {
 
     render() {
         return (
-            <div className='movie_Details'>
-                <h1 className='detail_title'>{this.state.data.title}</h1>
-                <div className='contain_details'>
+            this.state.data.length < 1 ?
+                <div>
+                    <Nav></Nav>
+                    <Error404></Error404>
+                </div>
+                :
+                <div className='movie_Details'>
+                    <Nav></Nav>
 
-                    <div className='box_left'>
+                    <h1 className='detail_title'>{this.state.data.title}</h1>
+                    <div className='contain_details'>
 
-                        <img src={`https://image.tmdb.org/t/p/original/` + this.state.data.poster_path} alt='poster'></img>
+                        <div className='box_left'>
+
+                            <img src={`https://image.tmdb.org/t/p/original/` + this.state.data.poster_path} alt='poster'></img>
+                        </div>
+
+                        <div className='detail_grid box_right'>
+                            <h2>{getString('movieDetailRelease')}</h2>
+                            <p>{this.state.data.release_date}</p>
+                            <h2>{getString('movieDetailGenre')}</h2>
+                            <p>{this.state.genres.map((genre, i) => {
+                                if (i === this.state.genres.length - 1) {
+                                    return <span key={i}>{genre.name}</span>
+                                } else {
+                                    return <span key={i}>{genre.name}, </span>
+                                }
+                            })}</p>
+                            <h2>{getString('movieDetailOverview')}</h2>
+                            <p>{this.state.data.overview}</p>
+                            <h2>{getString('movieDetailVoting')}</h2>
+                            <p>{this.state.data.vote_average}</p>
+                        </div>
+                    </div>
+                    <div className='contain-videos'>
+                        <h2>{getString('movieDetailTrailer')}</h2>
+                        <Trailer movie_id={this.props.match.params.id} imgSrc={this.state.data.poster_path}></Trailer>
                     </div>
 
-                    <div className='detail_grid box_right'>
-                        <h2>{getString('movieDetailRelease')}</h2>
-                        <p>{this.state.data.release_date}</p>
-                        <h2>{getString('movieDetailGenre')}</h2>
-                        <p>{this.state.genres.map((genre, i) => {
-                            if (i === this.state.genres.length - 1) {
-                                return <span key={i}>{genre.name}</span>
-                            } else {
-                                return <span key={i}>{genre.name}, </span>
-                            }
-                        })}</p>
-                        <h2>{getString('movieDetailOverview')}</h2>
-                        <p>{this.state.data.overview}</p>
-                        <h2>{getString('movieDetailVoting')}</h2>
-                        <p>{this.state.data.vote_average}</p>
-                    </div>
                 </div>
-                <div className='contain-videos'>
-                    <h2>{getString('movieDetailTrailer')}</h2>
-                    <Trailer movie_id={this.props.match.params.id} imgSrc={this.state.data.poster_path}></Trailer>
-                </div>
-
-            </div>
         );
     }
 }
