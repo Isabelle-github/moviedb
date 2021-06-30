@@ -41,14 +41,14 @@ class SeriesTrailer extends Component {
                         {
                             this.state.video_trailers.map(trailerInfo => {
                                 return (<div className='video-box' key={trailerInfo.id}>
-                                    <iframe width="300" src={`https://www.youtube.com/embed/${trailerInfo.key}`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                                    <iframe width="350" height="300" src={`https://www.youtube.com/embed/${trailerInfo.key}`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                                 </div>)
                             })
                         }
                     </article> :
                     <article className='all_videos'>
                         <div className='video-box'>
-                            {getString('noTrailerFound')}
+                            <p className='noTrailer'>{getString('noTrailerFound')}</p>
                             {/* <img src={NoVideo} alt='NoVideoFound'></img> */}
                         </div>
                     </article>
