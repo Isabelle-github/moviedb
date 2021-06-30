@@ -326,12 +326,13 @@ main {
   color: $font-color;
   // font-family: 'Anton', sans-serif;
   font-family: 'Roboto', sans-serif;
+  overflow: hidden;
   h1{
     font-family: 'Anton', sans-serif;
+    font-weight: lighter;
     span {
       font-size: 3rem;
       font-family: 'Roboto', sans-serif;
-      font-weight: lighter;
       position: relative;
       bottom: -1em;
       opacity: 0;
@@ -342,15 +343,26 @@ main {
      width: 50%;
      margin: 0 auto;
   }
-  div {
+  .finger {
     font-size: 3rem;
     padding: 2%;
+    animation: move-finger 0.75s infinite ease-in;
+    position: relative;
+    bottom: -1em;
   }
   iframe{
      border: solid 2px $accent-color;
      border-radius: 10px;
      margin-bottom: 3em;
   }
+  .raccoon {
+    font-size: 3rem;
+    position: relative;
+    bottom: -1.5em;
+    animation: move-raccoon 0.75s infinite;
+  }
+
+/* Animation Impressum */
 }
 .animationR {
   animation: move-text 0.75s infinite;
@@ -390,6 +402,39 @@ main {
     opacity: 1;
   }
 }
+
+@keyframes move-finger {
+  0% {
+    bottom: -0.2em;
+    opacity: 1;
+    color: $accent-color;
+  }
+  
+  50% {
+    bottom: 0.2em;
+  }
+
+  100% {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes move-raccoon {
+  0% {
+    bottom: -0.2em;
+  }
+  
+  50% {
+    bottom: 0.2em;
+  }
+
+  100% {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
 /* ----- media queries----- */
 @media screen and (max-width: 1200px) {
 
