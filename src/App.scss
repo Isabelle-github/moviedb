@@ -38,6 +38,13 @@ header{
     span{
       color:$accent-color;
     }
+
+    &:hover span {
+      animation-name: hopp;
+      animation-duration: 0.5s;
+      animation-iteration-count: 2;
+      animation-timing-function: ease-in-out;
+    }
   }
   .search-box{
     width: 40%;
@@ -606,4 +613,16 @@ main {
   }
 
 
+}
+
+@keyframes hopp {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(-20%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
 }

@@ -49,8 +49,8 @@ class Header extends Component {
             const opacity = state.isDisabled ? 0.5 : 1;
             const transition = 'opacity 300ms';
             return { ...provided, opacity, transition };
-          /*   ...provided,
-            background: state.isSelected ? '#384a5c' : '#384a5c', */
+            /*   ...provided,
+              background: state.isSelected ? '#384a5c' : '#384a5c', */
         },
         menu: (provided, state) => ({
             ...provided,
@@ -85,7 +85,7 @@ class Header extends Component {
         return (
             <header>
                 <Link to='/'>
-                    <h1><span>.</span>MOV</h1>
+                    <h1><span id="point">.</span>MOV</h1>
                 </Link>
                 <div className='search-box'>
                     <div className='search-icon-box'><img src={searchIcon} alt="a search icon"></img></div>
