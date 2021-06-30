@@ -91,7 +91,7 @@ main {
   /* margin-top: 10%; */
   background-color: $main-background;
   color: $font-color;
-  padding: 4%;
+  padding: 0 4% 4% 4%;
   h1 {
     font-family: 'Anton', sans-serif; 
     font-size: 3rem;
@@ -378,7 +378,7 @@ main {
   0% {
     bottom: -0.2em;
     opacity: 1;
-    color: red;
+    color: $accent-color;
   }
   
   50% {

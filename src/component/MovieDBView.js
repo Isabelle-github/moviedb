@@ -3,7 +3,6 @@ import Impressum from "./Impressum";
 import Header from './Header';
 import Main from './Main';
 import Footer from './Footer'
-import Nav from "./Nav";
 import Error404 from "./Error404";
 import PopularSeries from "./PopularSeries";
 
@@ -41,7 +40,6 @@ class MovieDBView extends Component {
         return (
             <Router>
                 <Header setSearch={(input) => this.setSearchInput(input)} setLang={(lang) => this.setLanguage(lang)}></Header>
-                <Nav setNav={(selectedNav) => this.setNav(selectedNav)} selectedNav={this.state.selectedNav}></Nav>
                 <Switch>
                     <Route path="/" exact>
                         <Main searchInput={this.state.searchInput}></Main>

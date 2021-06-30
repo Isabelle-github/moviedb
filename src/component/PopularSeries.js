@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import apiKey from "../data/apiKey";
 import MovieListItem from "./MovieListItem";
 import getString from '../data/strings';
+import Nav from "./Nav";
 
 
 import {
@@ -33,6 +34,7 @@ class PopularSeries extends Component {
         //console.log(foundSeries);
         return (
             <main>
+                <Nav selectedNav={1}></Nav>
                 <h1>{getString('popularSeriesTitle')}</h1>
                 <div className="body-movies">
 
@@ -105,7 +107,8 @@ class PopularSeries extends Component {
                                     })
                                 }
                             </div>
-                        </div>)}
+                        </div>
+                    )}
                 </div>
             </main>
         );
