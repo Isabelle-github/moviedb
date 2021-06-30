@@ -42,7 +42,7 @@ class SeriesDetail extends Component {
                 :
                 <div className='movie_Details'>
                     <Nav></Nav>
-                    <h1 className='detail_title'>{this.state.data.title}</h1>
+                    <h1 className='detail_title'>{this.state.data.name}</h1>
                     <div className='contain_details'>
 
                         <div className='box_left'>
