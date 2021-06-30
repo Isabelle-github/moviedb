@@ -10,13 +10,13 @@ class Impressum extends Component {
                 <p>{getString('impressumText')}</p>
                 <div className="finger"> 👇🏼 </div>
                 <div className="raccoon-side"> 🦝 </div>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/Nx_Sm8qkj2g?start=5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Nx_Sm8qkj2g?start=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
                 <div className="raccoon-side2"> 🦝 </div>
                 <section className="rac-animation">
                     <div className="raccoon"> 🦝 </div>
-                    <img src={kaching} alt="#kaching-raccoon" className="raccoon-kaching"/>
+                    <img src={kaching} alt="#kaching-raccoon" className="raccoon-kaching" />
                 </section>
-                
+
             </div>
 
         );

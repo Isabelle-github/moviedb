@@ -115,7 +115,7 @@ main {
   }
   .body-movies {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     a {
       text-decoration: none;
     }
@@ -145,12 +145,14 @@ main {
   .img-body {
     position: relative;
     max-width: 300px;
+    width: 100%;
+    align-self: center;
     /* display: flex;
     width: 220px; */
     img {
       min-width: 100%;
       /* min-height: 250px; */
-      max-height: 300px;
+      // max-height: 300px;
       object-fit:cover;
       object-position: center;
     }

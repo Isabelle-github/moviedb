@@ -14,6 +14,7 @@ class PopularSeries extends Component {
     state = {
         popularSeries: [],
         genreList: [],
+        isLoaded: false,
         lang: localStorage.getItem('preferredLanguage')
     }
 
@@ -27,90 +28,92 @@ class PopularSeries extends Component {
         const json2 = await response2.json()
         this.setState({ genreList: json2.genres });
         // console.log(this.state.genreList)
+
+        this.setState({ isLoaded: true });
     }
 
     render() {
         let foundSeries = this.state.popularSeries.filter(series => series.name.toLowerCase().includes(this.props.searchInput.toLowerCase()));
         //console.log(foundSeries);
         return (
-            <main>
-                <Nav selectedNav={1}></Nav>
-                <h1>{getString('popularSeriesTitle')}</h1>
-                <div className="body-movies">
+            this.state.isLoaded ?
+                <main>
+                    <Nav selectedNav={1}></Nav>
+                    <h1>{getString('popularSeriesTitle')}</h1>
+                    <div className="body-movies">
 
-                    {(foundSeries.length !== 0 ? foundSeries.map(series => {
-                        let newGenreListForSeries = []
-                        this.state.genreList.forEach(genreId => {
-                            // console.log("genreID from List")
-                            // console.log(genreId)
-                            series.genre_ids.forEach(id => {
-                                // console.log("movie id for each")
-                                // console.log(`before possible hit id:${id} genreId:${genreId}`)
-                                if (genreId.id === id) {
-                                    // console.log("hit")
-                                    newGenreListForSeries.push(genreId.name)
-                                }
+                        {(foundSeries.length !== 0 ? foundSeries.map(series => {
+                            let newGenreListForSeries = []
+                            this.state.genreList.forEach(genreId => {
+                                // console.log("genreID from List")
+                                // console.log(genreId)
+                                series.genre_ids.forEach(id => {
+                                    // console.log("movie id for each")
+                                    // console.log(`before possible hit id:${id} genreId:${genreId}`)
+                                    if (genreId.id === id) {
+                                        // console.log("hit")
+                                        newGenreListForSeries.push(genreId.name)
+                                    }
+                                })
                             })
-                        })
-                        // console.log(newGenreListForMovie)
+                            // console.log(newGenreListForMovie)
 
-                        let releaseYear = series.first_air_date
-                        if (typeof releaseYear === 'string') {
-                            releaseYear = releaseYear.substr(0, 4)
-                            console.log(releaseYear)
-                        }
+                            let releaseYear = series.first_air_date
+                            if (typeof releaseYear === 'string') {
+                                releaseYear = releaseYear.substr(0, 4)
+                            }
 
-                        return <Link key={series.id} to={`/series/detail/${series.id}`}>
-                            <MovieListItem key={series.id}
-                                img={series.poster_path}
-                                name={series.name}
-                                vote={series.vote_average}
-                                release={releaseYear}
-                                genre={newGenreListForSeries}
-                                from={'fromSeries'} />
-                        </Link>
-                    }) :
-                        <div className='body-found-movies'>
+                            return <Link key={series.id} to={`/series/detail/${series.id}`}>
+                                <MovieListItem key={series.id}
+                                    img={series.poster_path}
+                                    name={series.name}
+                                    vote={series.vote_average}
+                                    release={releaseYear}
+                                    genre={newGenreListForSeries}
+                                    from={'fromSeries'} />
+                            </Link>
+                        }) :
                             <h2>{getString('popularSeriesNotFoundText')}</h2>
-                            <div className="body-movies">
-                                {
-                                    this.state.popularSeries.map(series => {
-                                        let newGenreListForSeries = []
-                                        this.state.genreList.forEach(genreId => {
-                                            // console.log("genreID from List")
-                                            // console.log(genreId)
-                                            series.genre_ids.forEach(id => {
-                                                // console.log("movie id for each")
-                                                // console.log(`before possible hit id:${id} genreId:${genreId}`)
-                                                if (genreId.id === id) {
-                                                    // console.log("hit")
-                                                    newGenreListForSeries.push(genreId.name)
-                                                }
-                                            })
-                                        })
-                                        // console.log(newGenreListForMovie)
+                            // <div className='body-found-movies'>
+                            //     <div className="body-movies">
+                            //         {
+                            //             this.state.popularSeries.map(series => {
+                            //                 let newGenreListForSeries = []
+                            //                 this.state.genreList.forEach(genreId => {
+                            //                     // console.log("genreID from List")
+                            //                     // console.log(genreId)
+                            //                     series.genre_ids.forEach(id => {
+                            //                         // console.log("movie id for each")
+                            //                         // console.log(`before possible hit id:${id} genreId:${genreId}`)
+                            //                         if (genreId.id === id) {
+                            //                             // console.log("hit")
+                            //                             newGenreListForSeries.push(genreId.name)
+                            //                         }
+                            //                     })
+                            //                 })
+                            //                 // console.log(newGenreListForMovie)
 
-                                        let releaseYear = series.first_air_date
-                                        if (typeof releaseYear === 'string') {
-                                            releaseYear = releaseYear.substr(0, 4)
-                                            console.log(releaseYear)
-                                        }
+                            //                 let releaseYear = series.first_air_date
+                            //                 if (typeof releaseYear === 'string') {
+                            //                     releaseYear = releaseYear.substr(0, 4)
+                            //                     console.log(releaseYear)
+                            //                 }
 
-                                        return <Link key={series.id} to={`/detail/${series.id}`}>
-                                            <MovieListItem key={series.id}
-                                                img={series.poster_path}
-                                                name={series.name}
-                                                vote={series.vote_average}
-                                                release={releaseYear}
-                                                genre={newGenreListForSeries} />
-                                        </Link>
-                                    })
-                                }
-                            </div>
-                        </div>
-                    )}
-                </div>
-            </main>
+                            //                 return <Link key={series.id} to={`/detail/${series.id}`}>
+                            //                     <MovieListItem key={series.id}
+                            //                         img={series.poster_path}
+                            //                         name={series.name}
+                            //                         vote={series.vote_average}
+                            //                         release={releaseYear}
+                            //                         genre={newGenreListForSeries} />
+                            //                 </Link>
+                            //             })
+                            //         }
+                            //     </div>
+                            // </div>
+                        )}
+                    </div>
+                </main> : <main>Loading</main>
         );
     }
 }

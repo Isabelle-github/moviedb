@@ -16,6 +16,7 @@ class MovieDetail extends Component {
             data: [],
             genres: [],
             trailer: [],
+            isLoaded: false,
             lang: localStorage.getItem("preferredLanguage") ? localStorage.getItem("preferredLanguage") : "de"
         }
 
@@ -35,6 +36,8 @@ class MovieDetail extends Component {
         } else {
             console.log("other")
         }
+
+        this.setState({ isLoaded: true });
     }
 
     componentDidUpdate() {
@@ -43,46 +46,47 @@ class MovieDetail extends Component {
 
     render() {
         return (
-            this.state.data.length < 1 ?
-                <div>
-                    <Nav></Nav>
-                    <Error404></Error404>
-                </div>
-                :
-                <div className='movie_Details'>
-                    <Nav></Nav>
+            this.state.isLoaded ?
+                this.state.data.length < 1 ?
+                    <div>
+                        <Nav></Nav>
+                        <Error404></Error404>
+                    </div>
+                    :
+                    <div className='movie_Details'>
+                        <Nav></Nav>
 
-                    <h1 className='detail_title'>{this.state.data.title}</h1>
-                    <div className='contain_details'>
+                        <h1 className='detail_title'>{this.state.data.title}</h1>
+                        <div className='contain_details'>
 
-                        <div className='box_left'>
+                            <div className='box_left'>
 
-                            <img src={`https://image.tmdb.org/t/p/original/` + this.state.data.poster_path} alt='poster'></img>
+                                <img src={`https://image.tmdb.org/t/p/original/` + this.state.data.poster_path} alt='poster'></img>
+                            </div>
+
+                            <div className='detail_grid box_right'>
+                                <h2>{getString('movieDetailRelease')}</h2>
+                                <p>{this.state.data.release_date}</p>
+                                <h2>{getString('movieDetailGenre')}</h2>
+                                <p>{this.state.genres.map((genre, i) => {
+                                    if (i === this.state.genres.length - 1) {
+                                        return <span key={i}>{genre.name}</span>
+                                    } else {
+                                        return <span key={i}>{genre.name}, </span>
+                                    }
+                                })}</p>
+                                <h2>{getString('movieDetailOverview')}</h2>
+                                <p>{this.state.data.overview}</p>
+                                <h2>{getString('movieDetailVoting')}</h2>
+                                <p>{this.state.data.vote_average}</p>
+                            </div>
+                        </div>
+                        <div className='contain-videos'>
+                            <h2>{getString('movieDetailTrailer')}</h2>
+                            <Trailer movie_id={this.props.match.params.id} imgSrc={this.state.data.poster_path}></Trailer>
                         </div>
 
-                        <div className='detail_grid box_right'>
-                            <h2>{getString('movieDetailRelease')}</h2>
-                            <p>{this.state.data.release_date}</p>
-                            <h2>{getString('movieDetailGenre')}</h2>
-                            <p>{this.state.genres.map((genre, i) => {
-                                if (i === this.state.genres.length - 1) {
-                                    return <span key={i}>{genre.name}</span>
-                                } else {
-                                    return <span key={i}>{genre.name}, </span>
-                                }
-                            })}</p>
-                            <h2>{getString('movieDetailOverview')}</h2>
-                            <p>{this.state.data.overview}</p>
-                            <h2>{getString('movieDetailVoting')}</h2>
-                            <p>{this.state.data.vote_average}</p>
-                        </div>
-                    </div>
-                    <div className='contain-videos'>
-                        <h2>{getString('movieDetailTrailer')}</h2>
-                        <Trailer movie_id={this.props.match.params.id} imgSrc={this.state.data.poster_path}></Trailer>
-                    </div>
-
-                </div>
+                    </div> : <div className='movie_Details'>Loading</div>
         );
     }
 }
