@@ -39,6 +39,12 @@ header{
       color:$accent-color;
     }
   }
+  h1:hover {
+    color: $accent-color;
+    span:hover {
+      color: $font-color;
+    }
+  }
   .search-box{
     width: 40%;
     display: flex; 
@@ -92,6 +98,7 @@ main {
   background-color: $main-background;
   color: $font-color;
   padding: 0 4% 4% 4%;
+  min-height: 100vh;
   h1 {
     font-family: 'Anton', sans-serif; 
     font-size: 3rem;
@@ -158,7 +165,6 @@ main {
     }
   }
   
-
   .release-genre {
     font-family: 'Roboto', sans-serif;
     font-weight: 200;
@@ -197,10 +203,19 @@ main {
       margin-right: 2%;
     }
   }
+  h1:hover {
+    color: $accent-color;
+    .dot:hover {
+      color: $font-color;
+    }
+  }
   a {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     margin-left: 5%;
+  }
+  a:hover {
+    color: $accent-color;
   }
   .socialmedia-icon {
     margin-left: 25%;
@@ -269,9 +284,11 @@ main {
     // display: grid;
     // grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
     .video-box{
+      // height: 200px;
       margin: 0 auto;
       img{
         width: 100%;
+        height: 100%;
       }
     }
   }
@@ -300,9 +317,6 @@ main {
     &:active {
       color: $accent-color;
     }
-   /*  &:visited {
-      color: $accent-color;
-    } */
   }
   
 
@@ -311,6 +325,7 @@ main {
 // Errors
 .err404 {
   text-align: center;
+  min-height: 100vh;
   font-size: 3rem;
   padding: 3% 15%;
   color: $font-color;
@@ -321,6 +336,7 @@ main {
 }
 // Impressum
 .impressum{
+ /*  min-height: 100vh; */
   text-align: center;
   background-color: $main-background;
   color: $font-color;
@@ -346,7 +362,7 @@ main {
   .finger {
     font-size: 3rem;
     padding: 2%;
-    animation: move-finger 0.75s infinite ease-in;
+    animation: move-finger 0.75s infinite alternate;
     position: relative;
     bottom: -1em;
   }
@@ -355,15 +371,41 @@ main {
      border-radius: 10px;
      margin-bottom: 3em;
   }
-  .raccoon {
-    font-size: 3rem;
+  .raccoon-side {
+    font-size: 6rem;
     position: relative;
-    bottom: -1.5em;
-    animation: move-raccoon 0.75s infinite;
+    left: -60%;
+    transform: rotate(90deg);
+    animation: move-side-raccoon 2s infinite ease-in-out alternate;
   }
+  .raccoon-side2 {
+    font-size: 5rem;
+    position: relative;
+    right: -60%;
+    transform: rotate(270deg);
+    animation: move-side-raccoon2 3s infinite ease-in-out alternate;
+  }
+  .rac-animation {
+
+    .raccoon {
+      font-size: 3rem;
+      position: relative;
+      bottom: -5em;
+      right: 40%;
+      animation: move-raccoon 4s infinite ease-in-out alternate;
+    }
+    .raccoon-kaching {
+      width: 200px;
+      position: relative;
+      bottom: -2em;
+      right: -50%;
+      animation: move-raccoon2 4s infinite alternate;
+    }
+  }
+}
 
 /* Animation Impressum */
-}
+
 .animationR {
   animation: move-text 0.75s infinite;
 }
@@ -422,18 +464,41 @@ main {
 
 @keyframes move-raccoon {
   0% {
-    bottom: -0.2em;
-  }
-  
-  50% {
-    bottom: 0.2em;
+    bottom: -5em;
   }
 
   100% {
-    bottom: 0;
-    opacity: 1;
+    bottom: -3em;
   }
 }
+
+@keyframes move-raccoon2 {
+  0% {
+    right: -70%;
+  }
+
+  100% {
+    right: -30%;
+  }
+} 
+@keyframes move-side-raccoon {
+  0% {
+    left: -60%;
+  }
+
+  100% {
+    left: -45%;
+  }
+} 
+@keyframes move-side-raccoon2 {
+  0% {
+    right: -60%;
+  }
+
+  100% {
+    right: -45%;
+  }
+} 
 
 /* ----- media queries----- */
 @media screen and (max-width: 1200px) {
@@ -571,6 +636,10 @@ main {
       // grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       .video-box{
         margin: 0 auto;
+        iframe{
+          width: 100%;
+          margin: 0 auto;
+        }
         img{
           width: 100%;
           object-fit: contain;
@@ -615,28 +684,31 @@ main {
     }
   }
     // Impressum
-  .impressum{
-    text-align: center;
-    background-color: $main-background;
-    color: $font-color;
-    // font-family: 'Anton', sans-serif;
-    font-family: 'Roboto', sans-serif;
-    h1{
-      padding-top: 1%;
-      font-family: 'Anton', sans-serif;
-      font-size: 1.5rem;
-    }
-    p{
-      padding: 1.5em;
-      width: 80%;
-      margin: 0 auto;
-    }
-    iframe{
-      border: solid 2px $accent-color;
-      margin-bottom: 3em;
-      width: 80%;
-    }
-}
+    .impressum{
+      text-align: center;
+      background-color: $main-background;
+      color: $font-color;
+      // font-family: 'Anton', sans-serif;
+      font-family: 'Roboto', sans-serif;
+      h1{
+        padding-top: 1%;
+        font-family: 'Anton', sans-serif;
+        font-size: 1.5rem;
+        span{
+          font-size: 1.2em;
+        }
+      }
+      p{
+        padding: 1.5em;
+        width: 80%;
+        margin: 0 auto;
+      }
+      iframe{
+        border: solid 2px $accent-color;
+        margin-bottom: 3em;
+        width: 80%;
+      }
+  }
 
 
 }

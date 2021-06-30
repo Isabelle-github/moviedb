@@ -42,7 +42,7 @@ class Header extends Component {
             borderBottom: '1px dotted #ffffff',
             padding: 5,
             margin: 0,
-            background: state.isSelected ? '#24323F' : '#384a5c',
+           /*  background: state.isSelected ? '#24323F' : '#384a5c', */
             background: state.isFocused ? '#384a5c' : '#24323F',
         }),
         singleValue: (provided, state) => {
