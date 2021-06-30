@@ -579,28 +579,31 @@ main {
     }
   }
     // Impressum
-  .impressum{
-    text-align: center;
-    background-color: $main-background;
-    color: $font-color;
-    // font-family: 'Anton', sans-serif;
-    font-family: 'Roboto', sans-serif;
-    h1{
-      padding-top: 1%;
-      font-family: 'Anton', sans-serif;
-      font-size: 1.5rem;
-    }
-    p{
-      padding: 1.5em;
-      width: 80%;
-      margin: 0 auto;
-    }
-    iframe{
-      border: solid 2px $accent-color;
-      margin-bottom: 3em;
-      width: 80%;
-    }
-}
+    .impressum{
+      text-align: center;
+      background-color: $main-background;
+      color: $font-color;
+      // font-family: 'Anton', sans-serif;
+      font-family: 'Roboto', sans-serif;
+      h1{
+        padding-top: 1%;
+        font-family: 'Anton', sans-serif;
+        font-size: 1.5rem;
+        span{
+          font-size: 1.2em;
+        }
+      }
+      p{
+        padding: 1.5em;
+        width: 80%;
+        margin: 0 auto;
+      }
+      iframe{
+        border: solid 2px $accent-color;
+        margin-bottom: 3em;
+        width: 80%;
+      }
+  }
 
 
 }
